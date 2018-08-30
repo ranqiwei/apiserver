@@ -1,0 +1,302 @@
+package main
+
+import (
+	//"gopkg.in/gin-gonic/gin.v1"
+	"fmt"
+	"github.com/gin-gonic/gin"
+	"io"
+	"log"
+	"net/http"
+	"os"
+	"time"
+)
+
+type User struct {
+	Username string `form:"username" json:"username" binding:"required"`
+	Passwd   string `form:"passwd" json:"passwd" binding:"required"`
+	Age      int    `form:"age" json:"age"`
+}
+
+/*中间件-全局中间件*/
+//中间件的左右：日志记录，错误handler, 接口授权
+func MiddleWare() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		fmt.Println("before middleware")
+		c.Set("request", "client_request") //上下文添加属性
+		c.Next()
+		fmt.Println("before middleware")
+	}
+}
+
+//接口鉴权
+func AuthMiddleware() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		if cookie, err := c.Request.Cookie("session_id"); err == nil {
+			value := cookie.Value
+			fmt.Println(value)
+			if value == "123" {
+				c.Next()
+				return
+			}
+		}
+		c.JSON(http.StatusUnauthorized, gin.H{
+			"error": "Unauthorized",
+		})
+		c.Abort()
+		return
+	}
+
+}
+
+func main() {
+
+	router := gin.Default() //使用gin的Default方法创建一个路由handler
+
+	/*RestFul路由*/
+	router.GET("/", func(c *gin.Context) {
+		c.String(http.StatusOK, "Hello World")
+	})
+
+	router.GET("/user/:name", func(c *gin.Context) {
+		name := c.Param("name")
+		c.String(http.StatusOK, "Hello %s", name)
+	})
+
+	router.GET("/user/:name/*action", func(c *gin.Context) {
+		name := c.Param("name")
+		action := c.Param("action")
+		message := name + " is " + action
+		c.String(http.StatusOK, message)
+	})
+
+	/*Query string参数*/
+	router.GET("/welcome", func(c *gin.Context) {
+		firstname := c.DefaultQuery("firstname", "Guest")
+		lastname := c.Query("lastname")
+		c.String(http.StatusOK, "Hello %s %s", firstname, lastname)
+	})
+
+	/*body参数*/
+	router.POST("/form_post", func(c *gin.Context) {
+		message := c.PostForm("message") //解析body中的
+		nick := c.DefaultPostForm("nick", "anonymous")
+
+		c.JSON(http.StatusOK, gin.H{
+			"status": gin.H{
+				"status_code": http.StatusOK,
+				"status":      "ok",
+			},
+			"message": message,
+			"nick":    nick,
+		})
+	})
+
+	/*同时querystring和body也不是分开的，两个同时发送也可以*/
+	/*PUT方法可以同时发送俩种参数*/
+	router.PUT("/post", func(c *gin.Context) {
+		id := c.Query("id")
+		page := c.DefaultQuery("page", "0")
+		name := c.PostForm("name")
+		message := c.DefaultPostForm("message", "ss")
+		fmt.Printf("id: %s;page: %s; name: %s; message: %s \n", id, page, name, message)
+		c.JSON(http.StatusOK, gin.H{
+			"status_code": http.StatusOK,
+		})
+	})
+
+	/*文件上传*/
+	router.POST("/upload", func(c *gin.Context) {
+		name := c.PostForm("name")
+		fmt.Println(name)
+		file, header, err := c.Request.FormFile("upload") //file为文件数据
+		if err != nil {
+			c.String(http.StatusBadRequest, "Bad request")
+			return
+		}
+		filename := header.Filename
+		fmt.Println(file, err, filename)
+
+		out, err := os.Create(filename) //创建文件
+		if err != nil {
+			log.Fatal(err)
+		}
+		defer out.Close()
+		_, err = io.Copy(out, file)
+		if err != nil {
+			log.Fatal(err)
+		}
+		c.String(http.StatusCreated, "upload successful")
+	})
+
+	/*上传多个文件*/
+	router.POST("/multi/upload", func(c *gin.Context) {
+		err := c.Request.ParseMultipartForm(200000)
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		formdata := c.Request.MultipartForm
+		files := formdata.File["upload"]
+		for i, _ := range files {
+			file, err := files[i].Open()
+			defer file.Close()
+			if err != nil {
+				log.Fatal(err)
+			}
+
+			out, err := os.Create(files[i].Filename)
+
+			defer out.Close()
+			if err != nil {
+				log.Fatal(err)
+			}
+			_, err = io.Copy(out, file)
+			if err != nil {
+				log.Fatal(err)
+			}
+			c.String(http.StatusCreated, "upload successful \n")
+		}
+	})
+
+	/*HTML调用*/
+	router.LoadHTMLGlob("templates/*")
+	router.GET("/upload", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "upload.html", gin.H{})
+	})
+
+	//参数绑定
+	router.POST("/login", func(c *gin.Context) {
+		var user User //声明一个变量，创建一个对象
+
+		/*
+			var err error
+			contentType := c.Request.Header.Get("Content-Type")
+			switch contentType {
+			case "application/json":
+				err = c.BindJSON(&user)
+			case "application/x-www-form-urlencoded":
+				err = c.BindWith(&user, binding.Form)
+			} */
+		err := c.Bind(&user)
+
+		if err != nil {
+			fmt.Println(err)
+			log.Fatal(err)
+		}
+
+		c.JSON(http.StatusOK, gin.H{
+			"user":   user.Username,
+			"passwd": user.Passwd,
+			"age":    user.Age,
+		})
+
+	})
+
+	/*多格式渲染-c.XML*/
+	router.GET("/render", func(c *gin.Context) {
+		contentType := c.DefaultQuery("content_type", "json") //取url参数
+		if contentType == "json" {
+			c.JSON(http.StatusOK, gin.H{
+				"user":   "RSJ217",
+				"passwd": "123",
+			})
+		} else if contentType == "xml" {
+			c.XML(http.StatusOK, gin.H{
+				"user":   "rsj217",
+				"passwd": "123",
+			})
+		}
+	})
+
+	/*重定向*/
+	router.GET("/redict/google", func(c *gin.Context) {
+		c.Redirect(http.StatusMovedPermanently, "http://www.baidu.com")
+	})
+
+	/*分组路由*/
+	v1 := router.Group("/v1")
+	v1.GET("/login", func(c *gin.Context) {
+		c.String(http.StatusOK, "v1 login")
+	})
+	v2 := router.Group("/v2")
+	v2.GET("/login", func(c *gin.Context) {
+		c.String(http.StatusOK, "v2 login")
+	})
+
+	/*全局中间件*/
+	router.Use(MiddleWare()) //使用中间件，中间件以下的代码都生效
+	{                        //{}只是起一个包装作用，不要也可以
+		router.GET("/middleware", func(c *gin.Context) {
+			request := c.MustGet("request").(string)
+			req, _ := c.Get("request")
+			c.JSON(http.StatusOK, gin.H{
+				"middle_request": request,
+				"request":        req,
+			})
+		})
+	}
+
+	/*单个路由中间件*/
+	router.GET("/before", MiddleWare(), func(c *gin.Context) {
+		request := c.MustGet("request").(string)
+		c.JSON(http.StatusOK, gin.H{
+			"middle_request": request,
+		})
+	})
+
+	/*群组中间件*/
+	authorized := router.Group("/ss", MiddleWare())
+	//或者这样
+	//authorized := router.Group("/")
+	//authorized.Use(MyMiddleware())
+	{
+		authorized.POST("/login", func(c *gin.Context) {
+			c.String(http.StatusOK, "nice")
+		})
+	}
+
+	/*使用AuthMiddleware*/
+	router.GET("/auth/signin", func(c *gin.Context) {
+		cookie := &http.Cookie{
+			Name:     "session_id",
+			Value:    "123",
+			Path:     "/",
+			HttpOnly: true,
+		}
+		http.SetCookie(c.Writer, cookie)
+		c.String(http.StatusOK, "Login successful")
+	})
+
+	router.GET("/home", AuthMiddleware(), func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{"data": "home"})
+	})
+
+	/*携程高并发*/
+	router.GET("/sync", func(c *gin.Context) {
+		time.Sleep(6 * time.Second)
+		log.Println("Done! in path" + c.Request.URL.Path)
+	})
+
+	router.GET("/async", func(c *gin.Context) {
+		cGo := c.Copy()
+		go func() {
+			time.Sleep(6 * time.Second)
+			log.Println("Done! in path" + cGo.Request.URL.Path)
+		}()
+	})
+
+	/*gin还可以使用net/http框架run*/
+	/*
+		router := gin.Default()
+		s:=&http.Server{
+		Addr: ":8000",
+		Handler: router,
+		ReadTimeout: 10 * time.Second,
+		WriteTimeout: 10 * time.Second,
+		MaxHeaderBytes: 1 << 20,
+		}
+		s.ListenAndServe()
+	*/
+
+	router.Run(":8000")
+}

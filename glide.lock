@@ -1,0 +1,128 @@
+hash: 289f255fd063360548e569a5fc131093f18596e962eea8d321ce4b53d3d803db
+updated: 2018-08-30T09:46:19.747636563+08:00
+imports:
+- name: github.com/callistaenterprise/goblog
+  version: c8444945b75101c2308338735b8933b3c44e3f94
+  subpackages:
+  - common/util
+- name: github.com/fsnotify/fsnotify
+  version: c2828203cd70a50dcccfb2761f8b1f8ceef9a8e9
+- name: github.com/gin-contrib/sse
+  version: 22d885f9ecc78bf4ee5d72b937e4bbcdc58e8cae
+- name: github.com/gin-gonic/gin
+  version: 0da5b0c85ac2539e775a7e63aebf3e0b5808dab4
+  subpackages:
+  - binding
+  - json
+  - render
+- name: github.com/go-ole/go-ole
+  version: 7a0fa49edf48165190530c675167e2f319a05268
+  subpackages:
+  - oleutil
+- name: github.com/go-playground/locales
+  version: f63010822830b6fe52288ee52d5a1151088ce039
+  subpackages:
+  - currency
+- name: github.com/go-playground/universal-translator
+  version: 71201497bace774495daed26a3874fd339e0b538
+- name: github.com/go-sql-driver/mysql
+  version: 99ff426eb706cffe92ff3d058e168b278cabf7c7
+- name: github.com/golang/protobuf
+  version: b27b920f9e71b439b873b17bf99f56467623814a
+  subpackages:
+  - proto
+- name: github.com/hashicorp/hcl
+  version: 8cb6e5b959231cc1119e43259c4a608f9c51a241
+  subpackages:
+  - hcl/ast
+  - hcl/parser
+  - hcl/printer
+  - hcl/scanner
+  - hcl/strconv
+  - hcl/token
+  - json/parser
+  - json/scanner
+  - json/token
+- name: github.com/jinzhu/gorm
+  version: 32455088f24d6b1e9a502fb8e40fdc16139dbea8
+  subpackages:
+  - dialects/mysql
+- name: github.com/jinzhu/inflection
+  version: 04140366298a54a039076d798123ffa108fff46c
+- name: github.com/json-iterator/go
+  version: 1624edc4454b8682399def8740d46db5e4362ba4
+- name: github.com/lexkong/log
+  version: 972f9cd951fc7e5c8797f1fb2b57b63b09ff4de9
+  subpackages:
+  - lager
+  - lager/color
+- name: github.com/magiconair/properties
+  version: c2353362d570a7bfa228149c62842019201cfb71
+- name: github.com/mattn/go-isatty
+  version: 6ca4dbf54d38eea1a992b3c722a76a5d1c4cb25c
+- name: github.com/mitchellh/mapstructure
+  version: fa473d140ef3c6adf42d6b391fe76707f1f243c8
+- name: github.com/modern-go/concurrent
+  version: bacd9c7ef1dd9b15be4a9909b8ac7a4e313eec94
+- name: github.com/modern-go/reflect2
+  version: 94122c33edd36123c84d5368cfb2b69df93a0ec8
+- name: github.com/pelletier/go-toml
+  version: c2dbbc24a97911339e01bda0b8cabdbd8f13b602
+- name: github.com/shirou/gopsutil
+  version: ef54649286408053c0620d366dc06ead7d7cae5a
+  subpackages:
+  - cpu
+  - disk
+  - internal/common
+  - load
+  - mem
+- name: github.com/sirupsen/logrus
+  version: 3e01752db0189b9157070a0e1668a620f9a85da2
+- name: github.com/Sirupsen/logrus
+  version: 51df1d314861d341546c26e4354ce760fe4bb02b
+- name: github.com/spf13/afero
+  version: 787d034dfe70e44075ccc060d346146ef53270ad
+  subpackages:
+  - mem
+- name: github.com/spf13/cast
+  version: 8965335b8c7107321228e3e3702cab9832751bac
+- name: github.com/spf13/jwalterweatherman
+  version: 14d3d4c518341bea657dd8a226f5121c0ff8c9f2
+- name: github.com/spf13/pflag
+  version: d929dcbb10863323c436af3cf76cb16a6dfc9b29
+- name: github.com/spf13/viper
+  version: b5e8006cbee93ec955a89ab31e0e3ce3204f3736
+- name: github.com/StackExchange/wmi
+  version: b12b22c5341f0c26d88c4d66176330500e84db68
+- name: github.com/teris-io/shortid
+  version: 771a37caa5cf0c81f585d7b6df4dfc77e0615b5c
+- name: github.com/ugorji/go
+  version: aa28833c9f9fa49a39beb6969d0651ef6e488290
+  subpackages:
+  - codec
+- name: golang.org/x/crypto/bcrypt
+  version: 614d502a4dac94afa3a6ce146bd1736da82514c6
+- name: golang.org/x/crypto/ssh/terminal
+  version: 614d502a4dac94afa3a6ce146bd1736da82514c6
+- name: golang.org/x/sys/unix
+  version: d99a578cf41bfccdeaf48b0845c823a4b8b0ad5e
+- name: golang.org/x/sys/windows
+  version: d99a578cf41bfccdeaf48b0845c823a4b8b0ad5e
+- name: golang.org/x/text/transform
+  version: 6e3c4e7365ddcc329f090f96e4348398f6310088
+- name: golang.org/x/text/unicode/norm
+  version: 6e3c4e7365ddcc329f090f96e4348398f6310088
+- name: google.golang.org/appengine
+  version: 03cac3b07182cfb08c0d0c0b6ee72a1ceb151c92
+  repo: https://github.com/golang/appengine
+  subpackages:
+  - app_identity
+  - cloudsql
+  - modules
+- name: gopkg.in/go-playground/validator.v8
+  version: 5f1438d3fca68893a817e4a66806cea46a9e4ebf
+- name: gopkg.in/go-playground/validator.v9
+  version: e69e9a28bb62b977fdc58d051f1bb477b7cbe486
+- name: gopkg.in/yaml.v2
+  version: 5420a8b6744d3b0345ab293f6fcba19c978f1183
+testImports: []

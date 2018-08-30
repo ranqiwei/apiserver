@@ -1,0 +1,126 @@
+{"level":"INFO","timestamp":"2018-08-09 18:23:44.285","file":"apiserver/main.go:46","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2018-08-09 18:23:44.287","file":"apiserver/main.go:43","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-09 18:26:35.113","file":"apiserver/main.go:46","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2018-08-09 18:26:35.115","file":"apiserver/main.go:43","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-09 18:27:56.537","file":"apiserver/main.go:46","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2018-08-09 18:27:56.539","file":"apiserver/main.go:43","msg":"The router has been deployed successfully."}
+2018-08-09 18:30:02.442 INFO apiserver/main.go:46 Start to listening the incoming requests on http address: :8080
+2018-08-09 18:30:02.444 INFO apiserver/main.go:43 The router has been deployed successfully.
+2018-08-13 18:45:54.833 ERROR model/init.go:30 Database connection failed.Database name: db_apiserver error: sql: unknown driver "mysql" (forgotten import?)
+2018-08-14 16:42:04.069 ERROR model/init.go:31 Database connection failed.Database name: db_apiserver error: Error 1115: Unknown character set: 'uft8'
+2018-08-14 16:42:04.106 ERROR model/init.go:31 Database connection failed.Database name: db_apiserver error: Error 1115: Unknown character set: 'uft8'
+2018-08-14 16:42:04.106 INFO apiserver/main.go:52 Start to listening the incoming requests on http address: :8080
+2018-08-14 16:42:04.107 INFO apiserver/main.go:49 The router has been deployed successfully.
+2018-08-14 16:46:48.888 ERROR model/init.go:31 Database connection failed.Database name: db_apiserver error: Error 1115: Unknown character set: 'uft8'
+2018-08-14 16:46:48.889 ERROR model/init.go:31 Database connection failed.Database name: db_apiserver error: Error 1115: Unknown character set: 'uft8'
+2018-08-14 16:46:48.889 INFO apiserver/main.go:52 Start to listening the incoming requests on http address: :8080
+2018-08-14 16:46:48.890 INFO apiserver/main.go:49 The router has been deployed successfully.
+2018-08-14 16:47:22.840 INFO apiserver/main.go:52 Start to listening the incoming requests on http address: :8080
+2018-08-14 16:47:22.841 INFO apiserver/main.go:49 The router has been deployed successfully.
+2018-08-16 18:25:36.161 INFO apiserver/main.go:52 Start to listening the incoming requests on http address: :8080
+2018-08-16 18:25:36.161 INFO apiserver/main.go:49 The router has been deployed successfully.
+2018-08-16 18:28:42.023 DEBUG user/create.go:25 username is: [jfjiighi], password is []
+2018-08-16 18:28:56.235 DEBUG user/create.go:25 username is: [jfjiighi], password is [ddd1]
+2018-08-16 18:29:14.750 DEBUG user/create.go:25 username is: [], password is [ddd1]
+2018-08-16 18:29:14.750 ERROR user/create.go:28 Get an error error: Err - code:20102, message:The user was not found This is add message,error:username can not found in db: xx.xx.xx.xx
+2018-08-16 18:29:14.750 DEBUG user/create.go:32 err type is ErrUserNotFound
+2018-08-21 15:03:08.557 INFO apiserver/main.go:52 Start to listening the incoming requests on http address: :8080
+2018-08-21 15:03:08.564 INFO apiserver/main.go:64 waiting for the router, retry in 1 second.
+2018-08-21 15:03:13.567 INFO apiserver/main.go:64 waiting for the router, retry in 1 second.
+2018-08-21 15:03:18.571 INFO apiserver/main.go:64 waiting for the router, retry in 1 second.
+2018-08-21 15:05:07.868 INFO apiserver/main.go:52 Start to listening the incoming requests on http address: :8080
+2018-08-21 15:05:07.870 INFO apiserver/main.go:64 waiting for the router, retry in 1 second.
+2018-08-21 15:13:09.900 INFO apiserver/main.go:52 Start to listening the incoming requests on http address: :8080
+2018-08-21 15:13:09.902 INFO apiserver/main.go:64 waiting for the router, retry in 1 second.
+2018-08-21 15:13:14.905 INFO apiserver/main.go:64 waiting for the router, retry in 1 second.
+2018-08-21 15:13:19.910 INFO apiserver/main.go:64 waiting for the router, retry in 1 second.
+2018-08-21 15:13:24.912 INFO apiserver/main.go:64 waiting for the router, retry in 1 second.
+2018-08-21 15:20:16.877 INFO apiserver/main.go:52 Start to listening the incoming requests on http address: :8080
+2018-08-21 15:20:16.880 INFO apiserver/main.go:64 waiting for the router, retry in 1 second.
+2018-08-21 15:20:21.882 INFO apiserver/main.go:64 waiting for the router, retry in 1 second.
+2018-08-21 15:20:26.887 INFO apiserver/main.go:64 waiting for the router, retry in 1 second.
+2018-08-21 15:31:01.843 INFO apiserver/main.go:52 Start to listening the incoming requests on http address: :8080
+2018-08-21 15:31:01.844 INFO apiserver/main.go:64 waiting for the router, retry in 1 second.
+2018-08-21 15:31:06.848 INFO apiserver/main.go:64 waiting for the router, retry in 1 second.
+2018-08-21 15:31:11.851 INFO apiserver/main.go:64 waiting for the router, retry in 1 second.
+2018-08-21 15:31:16.856 INFO apiserver/main.go:64 waiting for the router, retry in 1 second.
+2018-08-21 15:31:21.858 INFO apiserver/main.go:64 waiting for the router, retry in 1 second.
+2018-08-21 15:31:26.860 INFO apiserver/main.go:64 waiting for the router, retry in 1 second.
+2018-08-21 15:31:31.862 INFO apiserver/main.go:64 waiting for the router, retry in 1 second.
+2018-08-21 15:31:36.866 INFO apiserver/main.go:64 waiting for the router, retry in 1 second.
+2018-08-21 15:31:41.869 INFO apiserver/main.go:64 waiting for the router, retry in 1 second.
+2018-08-21 15:31:46.871 INFO apiserver/main.go:64 waiting for the router, retry in 1 second.
+2018-08-21 15:31:51.871 FATAL apiserver/main.go:47 The router has no response, or it might took too long to start up. error: can't connect to the route
+2018-08-21 15:35:48.337 INFO apiserver/main.go:52 Start to listening the incoming requests on http address: :8080
+2018-08-21 15:36:37.311 INFO apiserver/main.go:52 Start to listening the incoming requests on http address: :8080
+2018-08-21 15:42:11.711 INFO apiserver/main.go:52 Start to listening the incoming requests on http address: :8080
+2018-08-21 15:42:11.713 INFO apiserver/main.go:64 waiting for the router, retry in 1 second.
+2018-08-21 15:42:16.716 INFO apiserver/main.go:64 waiting for the router, retry in 1 second.
+2018-08-21 15:48:41.249 INFO apiserver/main.go:53 Start to listening the incoming requests on http address: :8080
+2018-08-21 15:48:41.252 INFO apiserver/main.go:66 waiting for the router, retry in 1 second.
+2018-08-21 15:48:46.254 INFO apiserver/main.go:66 waiting for the router, retry in 1 second.
+2018-08-21 15:48:51.258 INFO apiserver/main.go:66 waiting for the router, retry in 1 second.
+2018-08-21 15:48:56.261 INFO apiserver/main.go:66 waiting for the router, retry in 1 second.
+2018-08-21 16:03:11.203 INFO apiserver/main.go:53 Start to listening the incoming requests on http address: :8080
+2018-08-21 16:03:11.206 DEBUG apiserver/main.go:61 goroutine 18 [running]:
+runtime/debug.Stack(0xc42027ab20, 0x1f, 0xc42011e6c0)
+	/usr/lib/golang/src/runtime/debug/stack.go:24 +0xa7
+main.pingServer(0x0, 0x0)
+	/app/GoProjects/src/apiserver/main.go:61 +0x125
+main.main.func1()
+	/app/GoProjects/src/apiserver/main.go:47 +0x26
+created by main.main
+	/app/GoProjects/src/apiserver/main.go:46 +0x11a
+
+2018-08-21 16:03:11.206 INFO apiserver/main.go:66 waiting for the router, retry in 1 second.
+2018-08-21 16:03:16.208 DEBUG apiserver/main.go:61 goroutine 18 [running]:
+runtime/debug.Stack(0xc42027af20, 0x1f, 0xc42011e7e0)
+	/usr/lib/golang/src/runtime/debug/stack.go:24 +0xa7
+main.pingServer(0x0, 0x0)
+	/app/GoProjects/src/apiserver/main.go:61 +0x125
+main.main.func1()
+	/app/GoProjects/src/apiserver/main.go:47 +0x26
+created by main.main
+	/app/GoProjects/src/apiserver/main.go:46 +0x11a
+
+2018-08-21 16:03:16.208 INFO apiserver/main.go:66 waiting for the router, retry in 1 second.
+2018-08-21 16:03:21.213 DEBUG apiserver/main.go:61 goroutine 18 [running]:
+runtime/debug.Stack(0xc42027b280, 0x1f, 0xc42011e000)
+	/usr/lib/golang/src/runtime/debug/stack.go:24 +0xa7
+main.pingServer(0x0, 0x0)
+	/app/GoProjects/src/apiserver/main.go:61 +0x125
+main.main.func1()
+	/app/GoProjects/src/apiserver/main.go:47 +0x26
+created by main.main
+	/app/GoProjects/src/apiserver/main.go:46 +0x11a
+
+2018-08-21 16:03:21.213 INFO apiserver/main.go:66 waiting for the router, retry in 1 second.
+2018-08-21 16:08:41.331 INFO apiserver/main.go:54 Start to listening the incoming requests on http address: :8080
+2018-08-21 16:16:10.497 INFO apiserver/main.go:52 Start to listening the incoming requests on http address: :8080
+2018-08-21 16:16:10.500 INFO apiserver/main.go:66 waiting for the router, retry in 1 second.
+2018-08-21 16:30:12.585 INFO apiserver/main.go:52 Start to listening the incoming requests on http address: :8080
+2018-08-21 16:30:12.589 INFO apiserver/main.go:66 waiting for the router, retry in 1 second.
+2018-08-21 16:30:17.591 INFO apiserver/main.go:66 waiting for the router, retry in 1 second.
+2018-08-21 16:32:01.269 INFO apiserver/main.go:52 Start to listening the incoming requests on http address: :8080
+2018-08-21 16:32:01.271 INFO apiserver/main.go:66 waiting for the router, retry in 1 second.
+2018-08-21 16:32:06.273 INFO apiserver/main.go:66 waiting for the router, retry in 1 second.
+2018-08-21 16:37:12.198 INFO apiserver/main.go:52 Start to listening the incoming requests on http address: :8080
+2018-08-21 16:37:12.199 INFO apiserver/main.go:49 The router has been deployed successfully.
+2018-08-21 16:39:32.549 INFO apiserver/main.go:52 Start to listening the incoming requests on http address: :8080
+2018-08-21 16:39:32.550 INFO apiserver/main.go:49 The router has been deployed successfully.
+2018-08-21 16:41:12.878 INFO user/create.go:23 URL username:ran
+2018-08-21 16:41:12.878 INFO user/create.go:25 URL key param desc: 
+2018-08-21 16:41:12.878 INFO user/create.go:28 Header Content-Type:application/json
+2018-08-21 16:41:12.878 DEBUG user/create.go:30 username is: [], password is [ddd1]
+2018-08-21 16:42:19.023 INFO user/create.go:23 URL username:ran
+2018-08-21 16:42:19.023 INFO user/create.go:25 URL key param desc: woc
+2018-08-21 16:42:19.023 INFO user/create.go:28 Header Content-Type:application/json
+2018-08-21 16:42:19.023 DEBUG user/create.go:30 username is: [], password is [ddd1]
+2018-08-21 16:42:35.608 INFO user/create.go:23 URL username:ran
+2018-08-21 16:42:35.608 INFO user/create.go:25 URL key param desc: woc
+2018-08-21 16:42:35.608 INFO user/create.go:28 Header Content-Type:application/json
+2018-08-21 16:42:35.608 DEBUG user/create.go:30 username is: [rav], password is [ddd1]
+2018-08-21 16:45:35.671 INFO user/create.go:23 URL username:ran
+2018-08-21 16:45:35.671 INFO user/create.go:25 URL key param desc: woc
+2018-08-21 16:45:35.671 INFO user/create.go:28 Header Content-Type:application/json
+2018-08-21 16:45:35.671 DEBUG user/create.go:30 username is: [], password is [ddd1]

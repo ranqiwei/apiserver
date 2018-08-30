@@ -1,0 +1,26 @@
+package: apiserver
+import:
+- package: github.com/gin-gonic/gin
+- package: github.com/shirou/gopsutil
+  subpackages:
+  - cpu
+  - disk
+  - load
+  - mem
+- package: github.com/spf13/viper
+  version: ~1.0.2
+- package: github.com/sirupsen/logrus
+  version: ^1.0.6
+- package: github.com/lexkong/log
+- package: github.com/jinzhu/gorm
+- package: github.com/jinzhu/inflection
+- package: google.golang.org/appengine
+  repo: https://github.com/golang/appengine
+  subpackages:
+  - cloudsql
+  - app_identity
+  - modules
+- package: github.com/go-sql-driver/mysql
+- package: golang.org/x/crypto/bcrypt
+- package: gopkg.in/go-playground/validator.v9
+- package: github.com/teris-io/shortid

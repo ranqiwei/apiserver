@@ -5,6 +5,8 @@ import (
 	"github.com/lexkong/log"
 	"github.com/lexkong/log/lager"
 	"apiserver/util"
+	"apiserver/handler"
+	"apiserver/pkg/errno"
 )
 
 //在控制台和日志打印错误，用户返回的错误由c.JSON写内容
@@ -50,6 +52,9 @@ import (
 func Create(c *gin.Context) {
 	log.Info("User Create function called", lager.Data{"X-Request-Id": util.GetReqId(c)})
 	var r CreateRequest
-	
+	if err := c.Bind(&r);err != nil{
+		handler.SendResponse(c,errno.ErrBind,nil)
+		return
+	}
 
 }

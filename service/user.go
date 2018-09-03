@@ -66,7 +66,7 @@ func ListUser(username string, offset, limit int) ([]*model.UserInfo, uint64, er
 	}()
 
 	select {
-	case <-finished:
+	case <-finished: //close之后用select finished读到结束通知
 	case err := <-errChan: //处理错误
 		return nil, count, err
 	}

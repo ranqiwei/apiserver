@@ -13,7 +13,7 @@ import (
 
 func Update(c *gin.Context) {
 	log.Info("Update function called.", lager.Data{"X-Request-Id": util.GetReqId(c)})
-	UserId, _ := strconv.Atoi(c.Param(":id"))
+	UserId, _ := strconv.Atoi(c.Param("id"))
 
 	var u model.UserModel
 	if err := c.Bind(&u); err != nil {

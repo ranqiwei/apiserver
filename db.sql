@@ -9,9 +9,9 @@ CREATE TABLE `tb_users`(
   id bigint(20) unsigned not null auto_increment,
   username varchar(255) not null,
   password varchar(255) not null,
-  createAt timestamp null DEFAULT null,
-  updateAt timestamp null default null,
-  deleteAt timestamp null default null,
+  createdAt timestamp null DEFAULT null,
+  updatedAt timestamp null default null,
+  deletedAt timestamp null default null,
   primary key (id),
   UNIQUE key username (username),
   KEY idx_tb_users_deletedAt (deleteAt)

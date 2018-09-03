@@ -30,7 +30,7 @@ func DeleteUser(id uint64) error {
 }
 
 func (u *UserModel) Update() error {
-	return DB.Self.Save(&u).Error
+	return DB.Self.Save(u).Error
 }
 
 func GetUser(username string) (*UserModel, error) {

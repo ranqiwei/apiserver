@@ -70,6 +70,7 @@ func Create(c *gin.Context) {
 	}
 
 	if err := u.Create(); err != nil {
+		println(err)
 		handler.SendResponse(c, errno.ErrDatabase, nil)
 		return
 	}

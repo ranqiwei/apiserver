@@ -6,13 +6,13 @@ import (
 	"apiserver/handler"
 	"apiserver/pkg/errno"
 	"strconv"
-	"github.com/sirupsen/logrus"
 	"github.com/lexkong/log/lager"
 	"apiserver/util"
+	"github.com/lexkong/log"
 )
 
 func Update(c *gin.Context) {
-	logrus.Info("Update function called.", lager.Data{"X-Request-Id": util.GetReqId(c)})
+	log.Info("Update function called.", lager.Data{"X-Request-Id": util.GetReqId(c)})
 	UserId, _ := strconv.Atoi(c.Param(":id"))
 
 	var u model.UserModel
@@ -32,7 +32,7 @@ func Update(c *gin.Context) {
 		return
 	}
 	if err := u.Update(); err != nil {
-		logrus.Debug(err.Error())
+		log.Debug(err.Error())
 		handler.SendResponse(c, errno.ErrDatabase, nil)
 		return
 	}

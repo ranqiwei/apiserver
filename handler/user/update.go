@@ -32,6 +32,7 @@ func Update(c *gin.Context) {
 		return
 	}
 	if err := u.Update(); err != nil {
+		logrus.Debug(err.Error())
 		handler.SendResponse(c, errno.ErrDatabase, nil)
 		return
 	}

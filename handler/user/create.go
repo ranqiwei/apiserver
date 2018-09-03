@@ -7,6 +7,7 @@ import (
 	"apiserver/util"
 	"apiserver/handler"
 	"apiserver/pkg/errno"
+	"apiserver/model"
 )
 
 //在控制台和日志打印错误，用户返回的错误由c.JSON写内容
@@ -52,9 +53,27 @@ import (
 func Create(c *gin.Context) {
 	log.Info("User Create function called", lager.Data{"X-Request-Id": util.GetReqId(c)})
 	var r CreateRequest
-	if err := c.Bind(&r);err != nil{
-		handler.SendResponse(c,errno.ErrBind,nil)
+	if err := c.Bind(&r); err != nil {
+		handler.SendResponse(c, errno.ErrBind, nil)
 		return
 	}
 
+	u := model.UserModel{Username: r.Username, Password: r.Password,}
+
+	if err := u.Validate(); err != nil {
+		handler.SendResponse(c, errno.ErrValidation, nil)
+		return
+	}
+	if err := u.Encrypt(); err != nil {
+		handler.SendResponse(c, errno.ErrEncrypt, nil)
+		return
+	}
+
+	if err := u.Create(); err != nil {
+		handler.SendResponse(c, errno.ErrDatabase, nil)
+		return
+	}
+
+	rsp := CreateResponse{Username: u.Username}
+	handler.SendResponse(c, errno.OK, rsp)
 }

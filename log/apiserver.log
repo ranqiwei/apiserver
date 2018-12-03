@@ -124,3 +124,7 @@ created by main.main
 2018-08-21 16:45:35.671 INFO user/create.go:25 URL key param desc: woc
 2018-08-21 16:45:35.671 INFO user/create.go:28 Header Content-Type:application/json
 2018-08-21 16:45:35.671 DEBUG user/create.go:30 username is: [], password is [ddd1]
+2018-12-03 13:49:53.765 ERROR model/init.go:31 Database connection failed.Database name: db_apiserver error: dial tcp 127.0.0.1:3306: getsockopt: connection refused
+2018-12-03 13:49:53.765 ERROR model/init.go:31 Database connection failed.Database name: db_apiserver error: dial tcp 127.0.0.1:3306: getsockopt: connection refused
+2018-12-03 13:49:53.765 INFO apiserver/main.go:52 Start to listening the incoming requests on http address: :8080
+2018-12-03 13:49:53.766 INFO apiserver/main.go:49 The router has been deployed successfully.

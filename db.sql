@@ -14,7 +14,7 @@ CREATE TABLE `tb_users`(
   deletedAt timestamp null default null,
   primary key (id),
   UNIQUE key username (username),
-  KEY idx_tb_users_deletedAt (deleteAt)
+  KEY idx_tb_users_deletedAt (deletedAt)
 ) AUTO_INCREMENT=2;
 
 LOCK TABLES `tb_users` WRITE;

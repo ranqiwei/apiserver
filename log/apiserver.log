@@ -128,3 +128,5 @@ created by main.main
 2018-12-03 13:49:53.765 ERROR model/init.go:31 Database connection failed.Database name: db_apiserver error: dial tcp 127.0.0.1:3306: getsockopt: connection refused
 2018-12-03 13:49:53.765 INFO apiserver/main.go:52 Start to listening the incoming requests on http address: :8080
 2018-12-03 13:49:53.766 INFO apiserver/main.go:49 The router has been deployed successfully.
+2019-04-08 18:36:36.066 INFO apiserver/main.go:52 Start to listening the incoming requests on http address: :8080
+2019-04-08 18:36:36.067 INFO apiserver/main.go:49 The router has been deployed successfully.

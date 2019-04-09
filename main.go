@@ -12,6 +12,7 @@ import (
 	"time"
 	"github.com/lexkong/log"
 	"apiserver/model"
+	"apiserver/router/middleware"
 )
 
 var (
@@ -34,7 +35,7 @@ func main() {
 	//Set the Gin engine
 	g := gin.New()
 	//外部加入的中间件
-	middlewares := []gin.HandlerFunc{}
+	middlewares := []gin.HandlerFunc{middleware.RequestId(), middleware.Logging()}
 	//路由加载
 	router.Load(
 		g,

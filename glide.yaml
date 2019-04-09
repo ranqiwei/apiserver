@@ -21,6 +21,6 @@ import:
   - app_identity
   - modules
 - package: github.com/go-sql-driver/mysql
-- package: golang.org/x/crypto/bcrypt
 - package: gopkg.in/go-playground/validator.v9
 - package: github.com/teris-io/shortid
+- package: github.com/willf/pad

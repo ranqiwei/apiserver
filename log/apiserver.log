@@ -134,3 +134,7 @@ created by main.main
 2019-04-08 18:47:33.365 INFO apiserver/main.go:49 The router has been deployed successfully.
 2019-04-08 18:48:01.447 INFO apiserver/main.go:52 Start to listening the incoming requests on http address: :8080
 2019-04-08 18:48:01.449 INFO apiserver/main.go:49 The router has been deployed successfully.
+2019-04-10 11:35:01.097 INFO apiserver/main.go:53 Start to listening the incoming requests on http address: :8080
+2019-04-10 11:35:01.098 INFO apiserver/main.go:50 The router has been deployed successfully.
+2019-04-10 11:35:36.798 DEBUG middleware/logging.go:52 New request come in,ip:171.221.234.28,path:/v1/user,Method: GET, body:``
+2019-04-10 11:35:36.881 INFO middleware/logging.go:81 83.525616ms  |171.221.234.28|GET /v1/user|{code: 0,message:OK.}

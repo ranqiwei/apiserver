@@ -289,9 +289,7 @@ func (v *Viper) WatchConfig() {
 							if err != nil {
 								log.Println("error:", err)
 							}
-							if v.onConfigChange != nil {
-								v.onConfigChange(event)
-							}
+							v.onConfigChange(event)
 						}
 					}
 				case err := <-watcher.Errors:

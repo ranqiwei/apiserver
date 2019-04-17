@@ -19,6 +19,7 @@ func List(c *gin.Context) {
 		handler.SendResponse(c, err, nil)
 		return
 	}
+
 	handler.SendResponse(c, nil, ListResponse{
 		TotalCount: count,
 		UserList:   infos,

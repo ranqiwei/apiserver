@@ -161,3 +161,25 @@ created by main.main
 2019-04-17 11:46:06.152 INFO middleware/logging.go:81 2.154364ms   |171.221.234.28|GET /v1/user|{code: 0,message:OK.}
 2019-04-17 11:47:47.364 DEBUG middleware/logging.go:52 New request come in,ip:171.221.234.28,path:/v1/user,Method: GET, body:``
 2019-04-17 11:47:47.367 INFO middleware/logging.go:81 2.857077ms   |171.221.234.28|GET /v1/user|{code: 0,message:OK.}
+2019-04-18 10:01:18.068 ERROR model/init.go:31 Database connection failed.Database name: db_apiserver error: dial tcp 127.0.0.1:3306: connect: connection refused
+2019-04-18 10:01:18.069 ERROR model/init.go:31 Database connection failed.Database name: db_apiserver error: dial tcp 127.0.0.1:3306: connect: connection refused
+2019-04-18 10:01:18.069 INFO apiserver/main.go:63 Start to listening the incoming requests on http address: :8080
+2019-04-18 10:01:18.069 INFO apiserver/main.go:58 Start to listening the incoming requests on https address: :8081
+2019-04-18 10:01:18.071 INFO apiserver/main.go:50 The router has been deployed successfully.
+2019-04-18 10:04:12.321 ERROR model/init.go:31 Database connection failed.Database name: db_apiserver error: dial tcp 127.0.0.1:3306: connect: connection refused
+2019-04-18 10:04:12.321 ERROR model/init.go:31 Database connection failed.Database name: db_apiserver error: dial tcp 127.0.0.1:3306: connect: connection refused
+2019-04-18 10:04:12.321 INFO apiserver/main.go:63 Start to listening the incoming requests on http address: :8080
+2019-04-18 10:04:12.322 INFO apiserver/main.go:58 Start to listening the incoming requests on https address: :8081
+2019-04-18 10:04:12.323 INFO apiserver/main.go:50 The router has been deployed successfully.
+2019-04-18 10:06:09.338 ERROR model/init.go:31 Database connection failed.Database name: db_apiserver error: Error 1045: Access denied for user 'root'@'localhost' (using password: YES)
+2019-04-18 10:06:09.339 ERROR model/init.go:31 Database connection failed.Database name: db_apiserver error: Error 1045: Access denied for user 'root'@'localhost' (using password: YES)
+2019-04-18 10:06:09.339 INFO apiserver/main.go:63 Start to listening the incoming requests on http address: :8080
+2019-04-18 10:06:09.339 INFO apiserver/main.go:58 Start to listening the incoming requests on https address: :8081
+2019-04-18 10:06:09.341 INFO apiserver/main.go:50 The router has been deployed successfully.
+2019-04-18 10:07:10.554 ERROR model/init.go:31 Database connection failed.Database name: db_apiserver error: Error 1045: Access denied for user 'root'@'localhost' (using password: YES)
+2019-04-18 10:07:10.554 INFO apiserver/main.go:63 Start to listening the incoming requests on http address: :8080
+2019-04-18 10:07:10.554 INFO apiserver/main.go:58 Start to listening the incoming requests on https address: :8081
+2019-04-18 10:07:10.556 INFO apiserver/main.go:50 The router has been deployed successfully.
+2019-04-18 10:08:38.217 INFO apiserver/main.go:63 Start to listening the incoming requests on http address: :8080
+2019-04-18 10:08:38.217 INFO apiserver/main.go:58 Start to listening the incoming requests on https address: :8081
+2019-04-18 10:08:38.219 INFO apiserver/main.go:50 The router has been deployed successfully.

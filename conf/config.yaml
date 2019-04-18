@@ -27,10 +27,10 @@ db:
   name: db_apiserver
   addr: 127.0.0.1:3306
   username: root
-  password: RW10086open123.
+  password: Sccin1qazCDE#
   gormlog: true
 docker_db:
   name: db_apiserver
   addr: 127.0.0.1:3306
   username: root
-  password: RW10086open123.
+  password: Sccin1qazCDE#

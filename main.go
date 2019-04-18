@@ -8,11 +8,11 @@ import (
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
 
-	"net/http"
-	"time"
-	"github.com/lexkong/log"
 	"apiserver/model"
 	"apiserver/router/middleware"
+	"github.com/lexkong/log"
+	"net/http"
+	"time"
 )
 
 var (
@@ -49,6 +49,16 @@ func main() {
 		}
 		log.Infof("The router has been deployed successfully.")
 	}()
+
+	//start https listen if certificate exists
+	cert := viper.GetString("tls.cert")
+	key := viper.GetString("tls.key")
+	if key != "" && cert != "" {
+		go func() {
+			log.Infof("Start to listening the incoming requests on https address: %s", viper.GetString("tls.addr"))
+			log.Infof(http.ListenAndServeTLS(viper.GetString("tls.addr"), cert, key, g).Error())
+		}()
+	}
 
 	log.Infof("Start to listening the incoming requests on http address: %s", viper.GetString("addr"))
 	log.Infof(http.ListenAndServe(viper.GetString("addr"), g).Error())

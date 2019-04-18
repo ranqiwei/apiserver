@@ -138,3 +138,26 @@ created by main.main
 2019-04-10 11:35:01.098 INFO apiserver/main.go:50 The router has been deployed successfully.
 2019-04-10 11:35:36.798 DEBUG middleware/logging.go:52 New request come in,ip:171.221.234.28,path:/v1/user,Method: GET, body:``
 2019-04-10 11:35:36.881 INFO middleware/logging.go:81 83.525616ms  |171.221.234.28|GET /v1/user|{code: 0,message:OK.}
+2019-04-17 10:19:45.790 INFO apiserver/main.go:53 Start to listening the incoming requests on http address: :8080
+2019-04-17 10:19:45.791 INFO apiserver/main.go:50 The router has been deployed successfully.
+2019-04-17 10:22:00.012 DEBUG middleware/logging.go:52 New request come in,ip:171.221.234.28,path:/v1/user,Method: GET, body:``
+2019-04-17 10:22:00.012 INFO middleware/logging.go:81 379.377µs    |171.221.234.28|GET /v1/user|{code: 20103,message:The token was invalid.}
+2019-04-17 10:25:00.173 DEBUG middleware/logging.go:52 New request come in,ip:171.221.234.28,path:/login,Method: POST, body:`{"username":"kong","password":"kongmodify"}`
+2019-04-17 10:25:00.371 INFO middleware/logging.go:81 198.130701ms |171.221.234.28|POST /login|{code: 20102,message:The user was not found.}
+2019-04-17 10:26:37.006 DEBUG middleware/logging.go:52 New request come in,ip:171.221.234.28,path:/login,Method: POST, body:`{"username":"admin","password":"admin"}`
+2019-04-17 10:26:37.091 INFO middleware/logging.go:81 85.225624ms  |171.221.234.28|POST /login|{code: 0,message:OK.}
+2019-04-17 10:27:12.342 DEBUG middleware/logging.go:52 New request come in,ip:171.221.234.28,path:/v1/user,Method: GET, body:``
+2019-04-17 10:27:12.345 INFO middleware/logging.go:81 3.093286ms   |171.221.234.28|GET /v1/user|{code: 0,message:OK.}
+2019-04-17 11:40:30.327 INFO apiserver/main.go:63 Start to listening the incoming requests on http address: :8080
+2019-04-17 11:40:30.328 INFO apiserver/main.go:58 Start to listening the incoming requests on https address: :8081
+2019-04-17 11:40:30.328 INFO apiserver/main.go:59 tls: failed to parse private key
+2019-04-17 11:40:30.329 INFO apiserver/main.go:50 The router has been deployed successfully.
+2019-04-17 11:44:44.711 INFO apiserver/main.go:63 Start to listening the incoming requests on http address: :8080
+2019-04-17 11:44:44.712 INFO apiserver/main.go:58 Start to listening the incoming requests on https address: :8081
+2019-04-17 11:44:44.713 INFO apiserver/main.go:50 The router has been deployed successfully.
+2019-04-17 11:46:00.486 DEBUG middleware/logging.go:52 New request come in,ip:171.221.234.28,path:/v1/user,Method: GET, body:``
+2019-04-17 11:46:00.489 INFO middleware/logging.go:81 2.789076ms   |171.221.234.28|GET /v1/user|{code: 0,message:OK.}
+2019-04-17 11:46:06.150 DEBUG middleware/logging.go:52 New request come in,ip:171.221.234.28,path:/v1/user,Method: GET, body:``
+2019-04-17 11:46:06.152 INFO middleware/logging.go:81 2.154364ms   |171.221.234.28|GET /v1/user|{code: 0,message:OK.}
+2019-04-17 11:47:47.364 DEBUG middleware/logging.go:52 New request come in,ip:171.221.234.28,path:/v1/user,Method: GET, body:``
+2019-04-17 11:47:47.367 INFO middleware/logging.go:81 2.857077ms   |171.221.234.28|GET /v1/user|{code: 0,message:OK.}

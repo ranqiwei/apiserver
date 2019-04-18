@@ -183,3 +183,18 @@ created by main.main
 2019-04-18 10:08:38.217 INFO apiserver/main.go:63 Start to listening the incoming requests on http address: :8080
 2019-04-18 10:08:38.217 INFO apiserver/main.go:58 Start to listening the incoming requests on https address: :8081
 2019-04-18 10:08:38.219 INFO apiserver/main.go:50 The router has been deployed successfully.
+2019-04-18 10:43:33.092 INFO apiserver/main.go:63 Start to listening the incoming requests on http address: :8080
+2019-04-18 10:43:33.092 INFO apiserver/main.go:58 Start to listening the incoming requests on https address: :8081
+2019-04-18 10:43:33.094 INFO apiserver/main.go:50 The router has been deployed successfully.
+2019-04-18 10:44:47.079 DEBUG middleware/logging.go:52 New request come in,ip:171.221.234.28,path:/v1/user,Method: GET, body:``
+2019-04-18 10:44:47.082 INFO middleware/logging.go:81 3.600407ms   |171.221.234.28|GET /v1/user|{code: 0,message:OK.}
+2019-04-18 10:44:54.077 DEBUG middleware/logging.go:52 New request come in,ip:171.221.234.28,path:/v1/user,Method: GET, body:``
+2019-04-18 10:44:54.079 INFO middleware/logging.go:81 2.643055ms   |171.221.234.28|GET /v1/user|{code: 0,message:OK.}
+2019-04-18 10:45:37.610 DEBUG middleware/logging.go:52 New request come in,ip:171.221.234.28,path:/v1/user,Method: GET, body:``
+2019-04-18 10:45:37.612 INFO middleware/logging.go:81 2.185754ms   |171.221.234.28|GET /v1/user|{code: 0,message:OK.}
+2019-04-18 10:45:54.762 DEBUG middleware/logging.go:52 New request come in,ip:171.221.234.28,path:/v1/user,Method: GET, body:``
+2019-04-18 10:45:54.764 INFO middleware/logging.go:81 2.501742ms   |171.221.234.28|GET /v1/user|{code: 0,message:OK.}
+2019-04-18 10:50:07.164 DEBUG middleware/logging.go:52 New request come in,ip:127.0.0.1,path:/v1/user,Method: GET, body:``
+2019-04-18 10:50:07.164 INFO middleware/logging.go:81 184.369µs    |127.0.0.1   |GET /v1/user|{code: 20103,message:The token was invalid.}
+2019-04-18 10:50:33.685 DEBUG middleware/logging.go:52 New request come in,ip:127.0.0.1,path:/v1/user,Method: GET, body:``
+2019-04-18 10:50:33.687 INFO middleware/logging.go:81 2.461082ms   |127.0.0.1   |GET /v1/user|{code: 0,message:OK.}

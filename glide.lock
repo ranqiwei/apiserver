@@ -1,5 +1,5 @@
 hash: 851fcbd67011887453129a1ed08a25fa81923e174151ebf1047b2e92eaf47101
-updated: 2019-04-10T16:55:31.271925989+08:00
+updated: 2019-04-18T10:34:25.326871572+08:00
 imports:
 - name: github.com/dgrijalva/jwt-go
   version: 06ea1031745cb8b3dab3f6a236daf2b0aa468b7e
@@ -24,7 +24,7 @@ imports:
 - name: github.com/go-playground/universal-translator
   version: 71201497bace774495daed26a3874fd339e0b538
 - name: github.com/go-sql-driver/mysql
-  version: 93c3765e9bb2e29c6a63277c9f829dae34ec24eb
+  version: 578c4c8066964679ef44f45de2b6c7e811cc665e
 - name: github.com/golang/protobuf
   version: e91709a02e0e8ff8b86b7aa913fdc9ae9498e825
   subpackages:
@@ -42,7 +42,7 @@ imports:
   - json/scanner
   - json/token
 - name: github.com/jinzhu/gorm
-  version: 071b657418cccdab721e549108b6b6cf8a1b7361
+  version: 7bc35615034c1d6994088c2cc925086fba6f565e
   subpackages:
   - dialects/mysql
 - name: github.com/jinzhu/inflection
@@ -67,7 +67,7 @@ imports:
 - name: github.com/modern-go/reflect2
   version: 94122c33edd36123c84d5368cfb2b69df93a0ec8
 - name: github.com/pelletier/go-toml
-  version: 63909f0a90ab0f36909e8e044e46ace10cf13ba2
+  version: 65b27e6823c427415d156c92d7034dd57a154cf8
 - name: github.com/satori/go.uuid
   version: b2ce2384e17bbe0c6d34077efa39dbab3e09123b
 - name: github.com/shirou/gopsutil
@@ -97,21 +97,21 @@ imports:
 - name: github.com/teris-io/shortid
   version: 771a37caa5cf0c81f585d7b6df4dfc77e0615b5c
 - name: github.com/ugorji/go
-  version: 2adff0894ba3bc2eeb9f9aea45fefd49802e1a13
+  version: d09a80c1e0c3162e022a114ab0f037e2596969e6
   subpackages:
   - codec
 - name: github.com/willf/pad
   version: eccfe5d84172e4f9dfd83fac9ed3a5f0eafbc2b4
 - name: golang.org/x/crypto/bcrypt
-  version: 38d8ce5564a5b71b2e3a00553993f1b9a7ae852f
+  version: f416ebab96af27ca70b6e5c23d6a0747530da626
 - name: golang.org/x/sys/unix
-  version: 4b34438f7a67ee5f45cc6132e2bad873a20324e9
+  version: 12500544f89f9420afe9529ba8940bf72d294972
 - name: golang.org/x/sys/windows
-  version: 4b34438f7a67ee5f45cc6132e2bad873a20324e9
+  version: 12500544f89f9420afe9529ba8940bf72d294972
 - name: golang.org/x/text/transform
-  version: 31e7599a6c37728c25ca34167be099d072ad335d
+  version: f4905fbd45b6790792202848439271c74074bbfd
 - name: golang.org/x/text/unicode/norm
-  version: 31e7599a6c37728c25ca34167be099d072ad335d
+  version: f4905fbd45b6790792202848439271c74074bbfd
 - name: google.golang.org/appengine
   version: 54a98f90d1c46b7731eb8fb305d2a321c30ef610
   repo: https://github.com/golang/appengine

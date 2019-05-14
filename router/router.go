@@ -2,10 +2,10 @@ package router
 
 import (
 	"apiserver/handler/sd"
+	"apiserver/handler/user"
+	"apiserver/router/middleware"
 	"github.com/gin-gonic/gin"
 	"net/http"
-	"apiserver/router/middleware"
-	"apiserver/handler/user"
 )
 
 /*路由加载的函数*/

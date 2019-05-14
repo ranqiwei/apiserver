@@ -1,13 +1,13 @@
 package user
 
 import (
+	"apiserver/handler"
+	"apiserver/model"
+	"apiserver/pkg/errno"
+	"apiserver/util"
 	"github.com/gin-gonic/gin"
 	"github.com/lexkong/log"
 	"github.com/lexkong/log/lager"
-	"apiserver/util"
-	"apiserver/handler"
-	"apiserver/pkg/errno"
-	"apiserver/model"
 )
 
 //在控制台和日志打印错误，用户返回的错误由c.JSON写内容
@@ -58,7 +58,7 @@ func Create(c *gin.Context) {
 		return
 	}
 
-	u := model.UserModel{Username: r.Username, Password: r.Password,}
+	u := model.UserModel{Username: r.Username, Password: r.Password}
 
 	if err := u.Validate(); err != nil {
 		handler.SendResponse(c, errno.ErrValidation, nil)

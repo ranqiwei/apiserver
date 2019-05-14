@@ -1,16 +1,16 @@
 package middleware
 
 import (
-	"github.com/gin-gonic/gin"
-	"bytes"
-	"time"
-	"regexp"
-	"io/ioutil"
 	"apiserver/handler"
-	"encoding/json"
-	"github.com/lexkong/log"
 	"apiserver/pkg/errno"
+	"bytes"
+	"encoding/json"
+	"github.com/gin-gonic/gin"
+	"github.com/lexkong/log"
 	"github.com/willf/pad"
+	"io/ioutil"
+	"regexp"
+	"time"
 )
 
 //used for capture Response

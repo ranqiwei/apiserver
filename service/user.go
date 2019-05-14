@@ -2,9 +2,9 @@ package service
 
 import (
 	"apiserver/model"
-	"sync"
 	"apiserver/util"
 	"fmt"
+	"sync"
 )
 
 /*做具体的查询处理*/
@@ -26,7 +26,7 @@ func ListUser(username string, offset, limit int) ([]*model.UserInfo, uint64, er
 	//每个goroutine用自己的锁，以及map映射
 	userList := model.UserList{
 		Lock:  new(sync.Mutex),
-		IdMap: make(map[uint64]*model.UserInfo, len(users)),//记录顺序
+		IdMap: make(map[uint64]*model.UserInfo, len(users)), //记录顺序
 	}
 
 	//channel，用于循环并发，routine错误

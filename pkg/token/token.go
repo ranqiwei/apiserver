@@ -2,10 +2,10 @@ package token
 
 import (
 	"errors"
-	"github.com/gin-gonic/gin"
-	"github.com/dgrijalva/jwt-go"
-	"github.com/spf13/viper"
 	"fmt"
+	"github.com/dgrijalva/jwt-go"
+	"github.com/gin-gonic/gin"
+	"github.com/spf13/viper"
 	"time"
 )
 
@@ -62,7 +62,7 @@ func ParseRequest(c *gin.Context) (*Context, error) { //call Parse
 
 	var t string
 	//Parse the header to get the token part.
-	fmt.Sscanf(header, "Bearer %s", &t)
+	_, _ = fmt.Sscanf(header, "Bearer %s", &t)
 	return Parse(t, secret)
 }
 

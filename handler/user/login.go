@@ -1,12 +1,12 @@
 package user
 
 import (
-	"github.com/gin-gonic/gin"
-	"apiserver/model"
 	"apiserver/handler"
-	"apiserver/pkg/errno"
+	"apiserver/model"
 	"apiserver/pkg/auth"
+	"apiserver/pkg/errno"
 	"apiserver/pkg/token"
+	"github.com/gin-gonic/gin"
 )
 
 func Login(c *gin.Context) {

@@ -1,10 +1,10 @@
 package user
 
 import (
-	"github.com/gin-gonic/gin"
 	"apiserver/handler"
 	"apiserver/pkg/errno"
 	"apiserver/service"
+	"github.com/gin-gonic/gin"
 )
 
 func List(c *gin.Context) {

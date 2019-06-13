@@ -8572,7 +8572,7 @@ func TestStartsWithValidation(t *testing.T) {
 		ExpectedNil bool
 	}{
 		{Value: "(/^ヮ^)/*:・ﾟ✧ glitter", Tag: "startswith=(/^ヮ^)/*:・ﾟ✧", ExpectedNil: true},
-		{Value: "abcd",  Tag: "startswith=(/^ヮ^)/*:・ﾟ✧", ExpectedNil: false},
+		{Value: "abcd", Tag: "startswith=(/^ヮ^)/*:・ﾟ✧", ExpectedNil: false},
 	}
 
 	validate := New()
@@ -8618,5 +8618,3 @@ func TestEndsWithValidation(t *testing.T) {
 		}
 	}
 }
-
-

@@ -25,9 +25,9 @@ func TestPluralsRange(t *testing.T) {
 	tests := []struct {
 		expected locales.PluralRule
 	}{
-	// {
-	// 	expected: locales.PluralRuleOther,
-	// },
+		// {
+		// 	expected: locales.PluralRuleOther,
+		// },
 	}
 
 	rules := trans.PluralsRange()
@@ -59,18 +59,18 @@ func TestPluralsOrdinal(t *testing.T) {
 	tests := []struct {
 		expected locales.PluralRule
 	}{
-	// {
-	// 	expected: locales.PluralRuleOne,
-	// },
-	// {
-	// 	expected: locales.PluralRuleTwo,
-	// },
-	// {
-	// 	expected: locales.PluralRuleFew,
-	// },
-	// {
-	// 	expected: locales.PluralRuleOther,
-	// },
+		// {
+		// 	expected: locales.PluralRuleOne,
+		// },
+		// {
+		// 	expected: locales.PluralRuleTwo,
+		// },
+		// {
+		// 	expected: locales.PluralRuleFew,
+		// },
+		// {
+		// 	expected: locales.PluralRuleOther,
+		// },
 	}
 
 	rules := trans.PluralsOrdinal()
@@ -102,12 +102,12 @@ func TestPluralsCardinal(t *testing.T) {
 	tests := []struct {
 		expected locales.PluralRule
 	}{
-	// {
-	// 	expected: locales.PluralRuleOne,
-	// },
-	// {
-	// 	expected: locales.PluralRuleOther,
-	// },
+		// {
+		// 	expected: locales.PluralRuleOne,
+		// },
+		// {
+		// 	expected: locales.PluralRuleOther,
+		// },
 	}
 
 	rules := trans.PluralsCardinal()
@@ -143,13 +143,13 @@ func TestRangePlurals(t *testing.T) {
 		v2       uint64
 		expected locales.PluralRule
 	}{
-	// {
-	// 	num1:     1,
-	// 	v1:       1,
-	// 	num2:     2,
-	// 	v2:       2,
-	// 	expected: locales.PluralRuleOther,
-	// },
+		// {
+		// 	num1:     1,
+		// 	v1:       1,
+		// 	num2:     2,
+		// 	v2:       2,
+		// 	expected: locales.PluralRuleOther,
+		// },
 	}
 
 	for _, tt := range tests {
@@ -169,26 +169,26 @@ func TestOrdinalPlurals(t *testing.T) {
 		v        uint64
 		expected locales.PluralRule
 	}{
-	// {
-	// 	num:      1,
-	// 	v:        0,
-	// 	expected: locales.PluralRuleOne,
-	// },
-	// {
-	// 	num:      2,
-	// 	v:        0,
-	// 	expected: locales.PluralRuleTwo,
-	// },
-	// {
-	// 	num:      3,
-	// 	v:        0,
-	// 	expected: locales.PluralRuleFew,
-	// },
-	// {
-	// 	num:      4,
-	// 	v:        0,
-	// 	expected: locales.PluralRuleOther,
-	// },
+		// {
+		// 	num:      1,
+		// 	v:        0,
+		// 	expected: locales.PluralRuleOne,
+		// },
+		// {
+		// 	num:      2,
+		// 	v:        0,
+		// 	expected: locales.PluralRuleTwo,
+		// },
+		// {
+		// 	num:      3,
+		// 	v:        0,
+		// 	expected: locales.PluralRuleFew,
+		// },
+		// {
+		// 	num:      4,
+		// 	v:        0,
+		// 	expected: locales.PluralRuleOther,
+		// },
 	}
 
 	for _, tt := range tests {
@@ -208,16 +208,16 @@ func TestCardinalPlurals(t *testing.T) {
 		v        uint64
 		expected locales.PluralRule
 	}{
-	// {
-	// 	num:      1,
-	// 	v:        0,
-	// 	expected: locales.PluralRuleOne,
-	// },
-	// {
-	// 	num:      4,
-	// 	v:        0,
-	// 	expected: locales.PluralRuleOther,
-	// },
+		// {
+		// 	num:      1,
+		// 	v:        0,
+		// 	expected: locales.PluralRuleOne,
+		// },
+		// {
+		// 	num:      4,
+		// 	v:        0,
+		// 	expected: locales.PluralRuleOther,
+		// },
 	}
 
 	for _, tt := range tests {
@@ -244,34 +244,34 @@ func TestDaysAbbreviated(t *testing.T) {
 		idx      int
 		expected string
 	}{
-	 {
-	 	idx:      0,
-	 	expected: "вс",
-	 },
-	 {
-	 	idx:      1,
-	 	expected: "пн",
-	 },
-	 {
-	 	idx:      2,
-	 	expected: "вт",
-	 },
-	 {
-	 	idx:      3,
-	 	expected: "ср",
-	 },
-	 {
-	 	idx:      4,
-	 	expected: "чт",
-	 },
-	 {
-	 	idx:      5,
-	 	expected: "пт",
-	 },
-	 {
-	 	idx:      6,
-	 	expected: "сб",
-	 },
+		{
+			idx:      0,
+			expected: "вс",
+		},
+		{
+			idx:      1,
+			expected: "пн",
+		},
+		{
+			idx:      2,
+			expected: "вт",
+		},
+		{
+			idx:      3,
+			expected: "ср",
+		},
+		{
+			idx:      4,
+			expected: "чт",
+		},
+		{
+			idx:      5,
+			expected: "пт",
+		},
+		{
+			idx:      6,
+			expected: "сб",
+		},
 	}
 
 	for _, tt := range tests {
@@ -298,34 +298,34 @@ func TestDaysNarrow(t *testing.T) {
 		idx      int
 		expected string
 	}{
-	 {
-	 	idx:      0,
-	 	expected: "вс",
-	 },
-	 {
-	 	idx:      1,
-	 	expected: "пн",
-	 },
-	 {
-	 	idx:      2,
-	 	expected: "вт",
-	 },
-	 {
-	 	idx:      3,
-	 	expected: "ср",
-	 },
-	 {
-	 	idx:      4,
-	 	expected: "чт",
-	 },
-	 {
-	 	idx:      5,
-	 	expected: "пт",
-	 },
-	 {
-	 	idx:      6,
-	 	expected: "сб",
-	 },
+		{
+			idx:      0,
+			expected: "вс",
+		},
+		{
+			idx:      1,
+			expected: "пн",
+		},
+		{
+			idx:      2,
+			expected: "вт",
+		},
+		{
+			idx:      3,
+			expected: "ср",
+		},
+		{
+			idx:      4,
+			expected: "чт",
+		},
+		{
+			idx:      5,
+			expected: "пт",
+		},
+		{
+			idx:      6,
+			expected: "сб",
+		},
 	}
 
 	for _, tt := range tests {
@@ -352,34 +352,34 @@ func TestDaysShort(t *testing.T) {
 		idx      int
 		expected string
 	}{
-	 {
-	 	idx:      0,
-	 	expected: "вс",
-	 },
-	 {
-	 	idx:      1,
-	 	expected: "пн",
-	 },
-	 {
-	 	idx:      2,
-	 	expected: "вт",
-	 },
-	 {
-	 	idx:      3,
-	 	expected: "ср",
-	 },
-	 {
-	 	idx:      4,
-	 	expected: "чт",
-	 },
-	 {
-	 	idx:      5,
-	 	expected: "пт",
-	 },
-	 {
-	 	idx:      6,
-	 	expected: "сб",
-	 },
+		{
+			idx:      0,
+			expected: "вс",
+		},
+		{
+			idx:      1,
+			expected: "пн",
+		},
+		{
+			idx:      2,
+			expected: "вт",
+		},
+		{
+			idx:      3,
+			expected: "ср",
+		},
+		{
+			idx:      4,
+			expected: "чт",
+		},
+		{
+			idx:      5,
+			expected: "пт",
+		},
+		{
+			idx:      6,
+			expected: "сб",
+		},
 	}
 
 	for _, tt := range tests {
@@ -406,34 +406,34 @@ func TestDaysWide(t *testing.T) {
 		idx      int
 		expected string
 	}{
-	 {
-	 	idx:      0,
-	 	expected: "воскресенье",
-	 },
-	 {
-	 	idx:      1,
-	 	expected: "понедельник",
-	 },
-	 {
-	 	idx:      2,
-	 	expected: "вторник",
-	 },
-	 {
-	 	idx:      3,
-	 	expected: "среда",
-	 },
-	 {
-	 	idx:      4,
-	 	expected: "четверг",
-	 },
-	 {
-	 	idx:      5,
-	 	expected: "пятница",
-	 },
-	 {
-	 	idx:      6,
-	 	expected: "суббота",
-	 },
+		{
+			idx:      0,
+			expected: "воскресенье",
+		},
+		{
+			idx:      1,
+			expected: "понедельник",
+		},
+		{
+			idx:      2,
+			expected: "вторник",
+		},
+		{
+			idx:      3,
+			expected: "среда",
+		},
+		{
+			idx:      4,
+			expected: "четверг",
+		},
+		{
+			idx:      5,
+			expected: "пятница",
+		},
+		{
+			idx:      6,
+			expected: "суббота",
+		},
 	}
 
 	for _, tt := range tests {
@@ -460,54 +460,54 @@ func TestMonthsAbbreviated(t *testing.T) {
 		idx      int
 		expected string
 	}{
-	 {
-	 	idx:      1,
-	 	expected: "янв.",
-	 },
-	 {
-	 	idx:      2,
-	 	expected: "февр.",
-	 },
-	 {
-	 	idx:      3,
-	 	expected: "мар.",
-	 },
-	 {
-	 	idx:      4,
-	 	expected: "апр.",
-	 },
-	 {
-	 	idx:      5,
-	 	expected: "мая",
-	 },
-	 {
-	 	idx:      6,
-	 	expected: "июн.",
-	 },
-	 {
-	 	idx:      7,
-	 	expected: "июл.",
-	 },
-	 {
-	 	idx:      8,
-	 	expected: "авг.",
-	 },
-	 {
-	 	idx:      9,
-	 	expected: "сент.",
-	 },
-	 {
-	 	idx:      10,
-	 	expected: "окт.",
-	 },
-	 {
-	 	idx:      11,
-	 	expected: "нояб.",
-	 },
-	 {
-	 	idx:      12,
-	 	expected: "дек.",
-	 },
+		{
+			idx:      1,
+			expected: "янв.",
+		},
+		{
+			idx:      2,
+			expected: "февр.",
+		},
+		{
+			idx:      3,
+			expected: "мар.",
+		},
+		{
+			idx:      4,
+			expected: "апр.",
+		},
+		{
+			idx:      5,
+			expected: "мая",
+		},
+		{
+			idx:      6,
+			expected: "июн.",
+		},
+		{
+			idx:      7,
+			expected: "июл.",
+		},
+		{
+			idx:      8,
+			expected: "авг.",
+		},
+		{
+			idx:      9,
+			expected: "сент.",
+		},
+		{
+			idx:      10,
+			expected: "окт.",
+		},
+		{
+			idx:      11,
+			expected: "нояб.",
+		},
+		{
+			idx:      12,
+			expected: "дек.",
+		},
 	}
 
 	for _, tt := range tests {
@@ -534,54 +534,54 @@ func TestMonthsNarrow(t *testing.T) {
 		idx      int
 		expected string
 	}{
-	 {
-	 	idx:      1,
-	 	expected: "Я",
-	 },
-	 {
-	 	idx:      2,
-	 	expected: "Ф",
-	 },
-	 {
-	 	idx:      3,
-	 	expected: "М",
-	 },
-	 {
-	 	idx:      4,
-	 	expected: "А",
-	 },
-	 {
-	 	idx:      5,
-	 	expected: "М",
-	 },
-	 {
-	 	idx:      6,
-	 	expected: "И",
-	 },
-	 {
-	 	idx:      7,
-	 	expected: "И",
-	 },
-	 {
-	 	idx:      8,
-	 	expected: "А",
-	 },
-	 {
-	 	idx:      9,
-	 	expected: "С",
-	 },
-	 {
-	 	idx:      10,
-	 	expected: "О",
-	 },
-	 {
-	 	idx:      11,
-	 	expected: "Н",
-	 },
-	 {
-	 	idx:      12,
-	 	expected: "Д",
-	 },
+		{
+			idx:      1,
+			expected: "Я",
+		},
+		{
+			idx:      2,
+			expected: "Ф",
+		},
+		{
+			idx:      3,
+			expected: "М",
+		},
+		{
+			idx:      4,
+			expected: "А",
+		},
+		{
+			idx:      5,
+			expected: "М",
+		},
+		{
+			idx:      6,
+			expected: "И",
+		},
+		{
+			idx:      7,
+			expected: "И",
+		},
+		{
+			idx:      8,
+			expected: "А",
+		},
+		{
+			idx:      9,
+			expected: "С",
+		},
+		{
+			idx:      10,
+			expected: "О",
+		},
+		{
+			idx:      11,
+			expected: "Н",
+		},
+		{
+			idx:      12,
+			expected: "Д",
+		},
 	}
 
 	for _, tt := range tests {
@@ -608,54 +608,54 @@ func TestMonthsWide(t *testing.T) {
 		idx      int
 		expected string
 	}{
-	 {
-	 	idx:      1,
-	 	expected: "января",
-	 },
-	 {
-	 	idx:      2,
-	 	expected: "февраля",
-	 },
-	 {
-	 	idx:      3,
-	 	expected: "марта",
-	 },
-	 {
-	 	idx:      4,
-	 	expected: "апреля",
-	 },
-	 {
-	 	idx:      5,
-	 	expected: "мая",
-	 },
-	 {
-	 	idx:      6,
-	 	expected: "июня",
-	 },
-	 {
-	 	idx:      7,
-	 	expected: "июля",
-	 },
-	 {
-	 	idx:      8,
-	 	expected: "августа",
-	 },
-	 {
-	 	idx:      9,
-	 	expected: "сентября",
-	 },
-	 {
-	 	idx:      10,
-	 	expected: "октября",
-	 },
-	 {
-	 	idx:      11,
-	 	expected: "ноября",
-	 },
-	 {
-	 	idx:      12,
-	 	expected: "декабря",
-	 },
+		{
+			idx:      1,
+			expected: "января",
+		},
+		{
+			idx:      2,
+			expected: "февраля",
+		},
+		{
+			idx:      3,
+			expected: "марта",
+		},
+		{
+			idx:      4,
+			expected: "апреля",
+		},
+		{
+			idx:      5,
+			expected: "мая",
+		},
+		{
+			idx:      6,
+			expected: "июня",
+		},
+		{
+			idx:      7,
+			expected: "июля",
+		},
+		{
+			idx:      8,
+			expected: "августа",
+		},
+		{
+			idx:      9,
+			expected: "сентября",
+		},
+		{
+			idx:      10,
+			expected: "октября",
+		},
+		{
+			idx:      11,
+			expected: "ноября",
+		},
+		{
+			idx:      12,
+			expected: "декабря",
+		},
 	}
 
 	for _, tt := range tests {
@@ -679,14 +679,14 @@ func TestFmtTimeFull(t *testing.T) {
 		t        time.Time
 		expected string
 	}{
-	// {
-	// 	t:        time.Date(2016, 02, 03, 9, 5, 1, 0, loc),
-	// 	expected: "9:05:01 am Eastern Standard Time",
-	// },
-	// {
-	// 	t:        time.Date(2016, 02, 03, 20, 5, 1, 0, fixed),
-	// 	expected: "8:05:01 pm OTHER",
-	// },
+		// {
+		// 	t:        time.Date(2016, 02, 03, 9, 5, 1, 0, loc),
+		// 	expected: "9:05:01 am Eastern Standard Time",
+		// },
+		// {
+		// 	t:        time.Date(2016, 02, 03, 20, 5, 1, 0, fixed),
+		// 	expected: "8:05:01 pm OTHER",
+		// },
 	}
 
 	trans := New()
@@ -710,14 +710,14 @@ func TestFmtTimeLong(t *testing.T) {
 		t        time.Time
 		expected string
 	}{
-	// {
-	// 	t:        time.Date(2016, 02, 03, 9, 5, 1, 0, loc),
-	// 	expected: "9:05:01 am EST",
-	// },
-	// {
-	// 	t:        time.Date(2016, 02, 03, 20, 5, 1, 0, loc),
-	// 	expected: "8:05:01 pm EST",
-	// },
+		// {
+		// 	t:        time.Date(2016, 02, 03, 9, 5, 1, 0, loc),
+		// 	expected: "9:05:01 am EST",
+		// },
+		// {
+		// 	t:        time.Date(2016, 02, 03, 20, 5, 1, 0, loc),
+		// 	expected: "8:05:01 pm EST",
+		// },
 	}
 
 	trans := New()
@@ -736,14 +736,14 @@ func TestFmtTimeMedium(t *testing.T) {
 		t        time.Time
 		expected string
 	}{
-	// {
-	// 	t:        time.Date(2016, 02, 03, 9, 5, 1, 0, time.UTC),
-	// 	expected: "9:05:01 am",
-	// },
-	// {
-	// 	t:        time.Date(2016, 02, 03, 20, 5, 1, 0, time.UTC),
-	// 	expected: "8:05:01 pm",
-	// },
+		// {
+		// 	t:        time.Date(2016, 02, 03, 9, 5, 1, 0, time.UTC),
+		// 	expected: "9:05:01 am",
+		// },
+		// {
+		// 	t:        time.Date(2016, 02, 03, 20, 5, 1, 0, time.UTC),
+		// 	expected: "8:05:01 pm",
+		// },
 	}
 
 	trans := New()
@@ -762,14 +762,14 @@ func TestFmtTimeShort(t *testing.T) {
 		t        time.Time
 		expected string
 	}{
-	// {
-	// 	t:        time.Date(2016, 02, 03, 9, 5, 1, 0, time.UTC),
-	// 	expected: "9:05 am",
-	// },
-	// {
-	// 	t:        time.Date(2016, 02, 03, 20, 5, 1, 0, time.UTC),
-	// 	expected: "8:05 pm",
-	// },
+		// {
+		// 	t:        time.Date(2016, 02, 03, 9, 5, 1, 0, time.UTC),
+		// 	expected: "9:05 am",
+		// },
+		// {
+		// 	t:        time.Date(2016, 02, 03, 20, 5, 1, 0, time.UTC),
+		// 	expected: "8:05 pm",
+		// },
 	}
 
 	trans := New()
@@ -788,10 +788,10 @@ func TestFmtDateFull(t *testing.T) {
 		t        time.Time
 		expected string
 	}{
-	// {
-	// 	t:        time.Date(2016, 02, 03, 9, 0, 1, 0, time.UTC),
-	// 	expected: "Wednesday, February 3, 2016",
-	// },
+		// {
+		// 	t:        time.Date(2016, 02, 03, 9, 0, 1, 0, time.UTC),
+		// 	expected: "Wednesday, February 3, 2016",
+		// },
 	}
 
 	trans := New()
@@ -810,10 +810,10 @@ func TestFmtDateLong(t *testing.T) {
 		t        time.Time
 		expected string
 	}{
-	// {
-	// 	t:        time.Date(2016, 02, 03, 9, 0, 1, 0, time.UTC),
-	// 	expected: "February 3, 2016",
-	// },
+		// {
+		// 	t:        time.Date(2016, 02, 03, 9, 0, 1, 0, time.UTC),
+		// 	expected: "February 3, 2016",
+		// },
 	}
 
 	trans := New()
@@ -832,10 +832,10 @@ func TestFmtDateMedium(t *testing.T) {
 		t        time.Time
 		expected string
 	}{
-	// {
-	// 	t:        time.Date(2016, 02, 03, 9, 0, 1, 0, time.UTC),
-	// 	expected: "Feb 3, 2016",
-	// },
+		// {
+		// 	t:        time.Date(2016, 02, 03, 9, 0, 1, 0, time.UTC),
+		// 	expected: "Feb 3, 2016",
+		// },
 	}
 
 	trans := New()
@@ -854,14 +854,14 @@ func TestFmtDateShort(t *testing.T) {
 		t        time.Time
 		expected string
 	}{
-	// {
-	// 	t:        time.Date(2016, 02, 03, 9, 0, 1, 0, time.UTC),
-	// 	expected: "2/3/16",
-	// },
-	// {
-	// 	t:        time.Date(-500, 02, 03, 9, 0, 1, 0, time.UTC),
-	// 	expected: "2/3/500",
-	// },
+		// {
+		// 	t:        time.Date(2016, 02, 03, 9, 0, 1, 0, time.UTC),
+		// 	expected: "2/3/16",
+		// },
+		// {
+		// 	t:        time.Date(-500, 02, 03, 9, 0, 1, 0, time.UTC),
+		// 	expected: "2/3/500",
+		// },
 	}
 
 	trans := New()
@@ -881,46 +881,46 @@ func TestFmtNumber(t *testing.T) {
 		v        uint64
 		expected string
 	}{
-	 {
-	 	num:      1123456.5643,
-	 	v:        2,
-	 	expected: "1 123 456,56",
-	 },
-	 {
-	 	num:      1123456.5643,
-	 	v:        1,
-	 	expected: "1 123 456,6",
-	 },
-	 {
-	 	num:      221123456.5643,
-	 	v:        3,
-	 	expected: "221 123 456,564",
-	 },
-	 {
-	 	num:      -221123456.5643,
-	 	v:        3,
-	 	expected: "-221 123 456,564",
-	 },
-	 {
-	 	num:      -221123456.5643,
-	 	v:        3,
-	 	expected: "-221 123 456,564",
-	 },
-	 {
-	 	num:      0,
-	 	v:        2,
-	 	expected: "0,00",
-	 },
-	 {
-	 	num:      -0,
-	 	v:        2,
-	 	expected: "0,00",
-	 },
-	 {
-	 	num:      -0,
-	 	v:        2,
-	 	expected: "0,00",
-	 },
+		{
+			num:      1123456.5643,
+			v:        2,
+			expected: "1 123 456,56",
+		},
+		{
+			num:      1123456.5643,
+			v:        1,
+			expected: "1 123 456,6",
+		},
+		{
+			num:      221123456.5643,
+			v:        3,
+			expected: "221 123 456,564",
+		},
+		{
+			num:      -221123456.5643,
+			v:        3,
+			expected: "-221 123 456,564",
+		},
+		{
+			num:      -221123456.5643,
+			v:        3,
+			expected: "-221 123 456,564",
+		},
+		{
+			num:      0,
+			v:        2,
+			expected: "0,00",
+		},
+		{
+			num:      -0,
+			v:        2,
+			expected: "0,00",
+		},
+		{
+			num:      -0,
+			v:        2,
+			expected: "0,00",
+		},
 	}
 
 	trans := New()
@@ -941,60 +941,60 @@ func TestFmtCurrency(t *testing.T) {
 		currency currency.Type
 		expected string
 	}{
-	// {
-	// 	num:      1123456.5643,
-	// 	v:        2,
-	// 	currency: currency.USD,
-	// 	expected: "$1,123,456.56",
-	// },
-	// {
-	// 	num:      1123456.5643,
-	// 	v:        1,
-	// 	currency: currency.USD,
-	// 	expected: "$1,123,456.60",
-	// },
-	// {
-	// 	num:      221123456.5643,
-	// 	v:        3,
-	// 	currency: currency.USD,
-	// 	expected: "$221,123,456.564",
-	// },
-	// {
-	// 	num:      -221123456.5643,
-	// 	v:        3,
-	// 	currency: currency.USD,
-	// 	expected: "-$221,123,456.564",
-	// },
-	// {
-	// 	num:      -221123456.5643,
-	// 	v:        3,
-	// 	currency: currency.CAD,
-	// 	expected: "-CAD 221,123,456.564",
-	// },
-	// {
-	// 	num:      0,
-	// 	v:        2,
-	// 	currency: currency.USD,
-	// 	expected: "$0.00",
-	// },
-	// {
-	// 	num:      -0,
-	// 	v:        2,
-	// 	currency: currency.USD,
-	// 	expected: "$0.00",
-	// },
-	// {
-	// 	num:      -0,
-	// 	v:        2,
-	// 	currency: currency.CAD,
-	// 	expected: "CAD 0.00",
-	// },
-	// {
-	// 	num:      1.23,
-	// 	v:        0,
-	// 	currency: currency.USD,
-	// 	expected: "$1.00",
-	// },
+		// {
+		// 	num:      1123456.5643,
+		// 	v:        2,
+		// 	currency: currency.USD,
+		// 	expected: "$1,123,456.56",
+		// },
+		// {
+		// 	num:      1123456.5643,
+		// 	v:        1,
+		// 	currency: currency.USD,
+		// 	expected: "$1,123,456.60",
+		// },
+		// {
+		// 	num:      221123456.5643,
+		// 	v:        3,
+		// 	currency: currency.USD,
+		// 	expected: "$221,123,456.564",
+		// },
+		// {
+		// 	num:      -221123456.5643,
+		// 	v:        3,
+		// 	currency: currency.USD,
+		// 	expected: "-$221,123,456.564",
+		// },
+		// {
+		// 	num:      -221123456.5643,
+		// 	v:        3,
+		// 	currency: currency.CAD,
+		// 	expected: "-CAD 221,123,456.564",
+		// },
+		// {
+		// 	num:      0,
+		// 	v:        2,
+		// 	currency: currency.USD,
+		// 	expected: "$0.00",
+		// },
+		// {
+		// 	num:      -0,
+		// 	v:        2,
+		// 	currency: currency.USD,
+		// 	expected: "$0.00",
+		// },
+		// {
+		// 	num:      -0,
+		// 	v:        2,
+		// 	currency: currency.CAD,
+		// 	expected: "CAD 0.00",
+		// },
+		// {
+		// 	num:      1.23,
+		// 	v:        0,
+		// 	currency: currency.USD,
+		// 	expected: "$1.00",
+		// },
 	}
 
 	trans := New()
@@ -1015,54 +1015,54 @@ func TestFmtAccounting(t *testing.T) {
 		currency currency.Type
 		expected string
 	}{
-	// {
-	// 	num:      1123456.5643,
-	// 	v:        2,
-	// 	currency: currency.USD,
-	// 	expected: "$1,123,456.56",
-	// },
-	// {
-	// 	num:      1123456.5643,
-	// 	v:        1,
-	// 	currency: currency.USD,
-	// 	expected: "$1,123,456.60",
-	// },
-	// {
-	// 	num:      221123456.5643,
-	// 	v:        3,
-	// 	currency: currency.USD,
-	// 	expected: "$221,123,456.564",
-	// },
-	// {
-	// 	num:      -221123456.5643,
-	// 	v:        3,
-	// 	currency: currency.USD,
-	// 	expected: "($221,123,456.564)",
-	// },
-	// {
-	// 	num:      -221123456.5643,
-	// 	v:        3,
-	// 	currency: currency.CAD,
-	// 	expected: "(CAD 221,123,456.564)",
-	// },
-	// {
-	// 	num:      -0,
-	// 	v:        2,
-	// 	currency: currency.USD,
-	// 	expected: "$0.00",
-	// },
-	// {
-	// 	num:      -0,
-	// 	v:        2,
-	// 	currency: currency.CAD,
-	// 	expected: "CAD 0.00",
-	// },
-	// {
-	// 	num:      1.23,
-	// 	v:        0,
-	// 	currency: currency.USD,
-	// 	expected: "$1.00",
-	// },
+		// {
+		// 	num:      1123456.5643,
+		// 	v:        2,
+		// 	currency: currency.USD,
+		// 	expected: "$1,123,456.56",
+		// },
+		// {
+		// 	num:      1123456.5643,
+		// 	v:        1,
+		// 	currency: currency.USD,
+		// 	expected: "$1,123,456.60",
+		// },
+		// {
+		// 	num:      221123456.5643,
+		// 	v:        3,
+		// 	currency: currency.USD,
+		// 	expected: "$221,123,456.564",
+		// },
+		// {
+		// 	num:      -221123456.5643,
+		// 	v:        3,
+		// 	currency: currency.USD,
+		// 	expected: "($221,123,456.564)",
+		// },
+		// {
+		// 	num:      -221123456.5643,
+		// 	v:        3,
+		// 	currency: currency.CAD,
+		// 	expected: "(CAD 221,123,456.564)",
+		// },
+		// {
+		// 	num:      -0,
+		// 	v:        2,
+		// 	currency: currency.USD,
+		// 	expected: "$0.00",
+		// },
+		// {
+		// 	num:      -0,
+		// 	v:        2,
+		// 	currency: currency.CAD,
+		// 	expected: "CAD 0.00",
+		// },
+		// {
+		// 	num:      1.23,
+		// 	v:        0,
+		// 	currency: currency.USD,
+		// 	expected: "$1.00",
+		// },
 	}
 
 	trans := New()
@@ -1082,31 +1082,31 @@ func TestFmtPercent(t *testing.T) {
 		v        uint64
 		expected string
 	}{
-	 {
-	 	num:      15,
-	 	v:        0,
-	 	expected: "15%",
-	 },
-	 {
-	 	num:      15,
-	 	v:        2,
-	 	expected: "15,00%",
-	 },
-	 {
-	 	num:      434.45,
-	 	v:        0,
-	 	expected: "434%",
-	 },
-	 {
-	 	num:      34.4,
-	 	v:        2,
-	 	expected: "34,40%",
-	 },
-	 {
-	 	num:      -34,
-	 	v:        0,
-	 	expected: "-34%",
-	 },
+		{
+			num:      15,
+			v:        0,
+			expected: "15%",
+		},
+		{
+			num:      15,
+			v:        2,
+			expected: "15,00%",
+		},
+		{
+			num:      434.45,
+			v:        0,
+			expected: "434%",
+		},
+		{
+			num:      34.4,
+			v:        2,
+			expected: "34,40%",
+		},
+		{
+			num:      -34,
+			v:        0,
+			expected: "-34%",
+		},
 	}
 
 	trans := New()

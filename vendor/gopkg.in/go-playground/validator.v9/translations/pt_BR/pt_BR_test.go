@@ -6,8 +6,8 @@ import (
 
 	brazilian_portuguese "github.com/go-playground/locales/pt_BR"
 	ut "github.com/go-playground/universal-translator"
-	"gopkg.in/go-playground/validator.v9"
 	. "gopkg.in/go-playground/assert.v1"
+	"gopkg.in/go-playground/validator.v9"
 )
 
 func TestTranslations(t *testing.T) {

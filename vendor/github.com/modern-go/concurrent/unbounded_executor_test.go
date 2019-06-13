@@ -3,8 +3,8 @@ package concurrent_test
 import (
 	"context"
 	"fmt"
-	"time"
 	"github.com/modern-go/concurrent"
+	"time"
 )
 
 func ExampleUnboundedExecutor_Go() {

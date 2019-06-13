@@ -2,11 +2,15 @@ package main
 
 import (
 	"apiserver/config"
+	version2 "apiserver/pkg/version"
 	"apiserver/router"
+	"encoding/json"
 	"errors"
+	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
+	"os"
 
 	"apiserver/model"
 	"apiserver/router/middleware"
@@ -17,10 +21,24 @@ import (
 
 var (
 	//配置文件
-	cfg = pflag.StringP("config", "c", "", "api config file path")
+	cfg     = pflag.StringP("config", "c", "", "api config file path")
+	version = pflag.BoolP("version", "v", false, "show version info.")
 )
 
 func main() {
+	//version
+	pflag.Parse()
+	if *version {
+		v := version2.Get()
+		marshaled, err := json.MarshalIndent(&v, "", " ")
+		if err != nil {
+			fmt.Printf("%v\n", err)
+			os.Exit(1)
+		}
+		fmt.Println(string(marshaled))
+		return
+	}
+
 	//viper初始化调用
 	if err := config.Init(*cfg); err != nil {
 		panic(err)

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SERVER="apiserver"
-BASE_DIR=$PWD
+BASE_DIR=$(pwd)
 INTERVAL=2
 
 # 命令行参数，需要手动指定
@@ -13,7 +13,7 @@ function start() {
         exit 1
     fi
 
-    nohub ${BASE_DIR}/${SERVER} ${ARGS} server &>/dev/null &
+    nohup ${BASE_DIR}/${SERVER} ${ARGS} server &>/dev/null &
 
     echo "sleeping..." && sleep ${INTERVAL}
 

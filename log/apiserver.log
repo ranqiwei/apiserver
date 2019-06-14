@@ -198,3 +198,16 @@ created by main.main
 2019-04-18 10:50:07.164 INFO middleware/logging.go:81 184.369µs    |127.0.0.1   |GET /v1/user|{code: 20103,message:The token was invalid.}
 2019-04-18 10:50:33.685 DEBUG middleware/logging.go:52 New request come in,ip:127.0.0.1,path:/v1/user,Method: GET, body:``
 2019-04-18 10:50:33.687 INFO middleware/logging.go:81 2.461082ms   |127.0.0.1   |GET /v1/user|{code: 0,message:OK.}
+2019-06-14 14:57:05.105 INFO apiserver/main.go:81 Start to listening the incoming requests on http address: :8080
+2019-06-14 14:57:05.106 INFO apiserver/main.go:76 Start to listening the incoming requests on https address: :8081
+2019-06-14 14:57:05.107 INFO apiserver/main.go:95 waiting for the router, retry in 1 second.
+2019-06-14 14:57:10.280 INFO apiserver/main.go:68 The router has been deployed successfully.
+2019-06-14 15:00:53.256 INFO apiserver/main.go:81 Start to listening the incoming requests on http address: :8080
+2019-06-14 15:00:53.256 INFO apiserver/main.go:76 Start to listening the incoming requests on https address: :8081
+2019-06-14 15:00:53.257 INFO apiserver/main.go:68 The router has been deployed successfully.
+2019-06-14 15:03:10.935 INFO apiserver/main.go:81 Start to listening the incoming requests on http address: :8080
+2019-06-14 15:03:10.935 INFO apiserver/main.go:76 Start to listening the incoming requests on https address: :8081
+2019-06-14 15:03:10.937 INFO apiserver/main.go:68 The router has been deployed successfully.
+2019-06-14 15:04:17.525 INFO apiserver/main.go:81 Start to listening the incoming requests on http address: :8080
+2019-06-14 15:04:17.525 INFO apiserver/main.go:76 Start to listening the incoming requests on https address: :8081
+2019-06-14 15:04:17.526 INFO apiserver/main.go:68 The router has been deployed successfully.

@@ -13,7 +13,7 @@ func NewInstance(opts *Options) (Instance, error) {
 	var aeOpts *aetest.Options
 	if opts != nil {
 		aeOpts = &aetest.Options{
-			AppID:                       opts.AppID,
+			AppID: opts.AppID,
 			StronglyConsistentDatastore: opts.StronglyConsistentDatastore,
 		}
 	}

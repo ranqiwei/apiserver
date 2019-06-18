@@ -1103,12 +1103,68 @@ func TestUnmarshalCustomTag(t *testing.T) {
 }
 
 func TestUnmarshalMap(t *testing.T) {
-	m := make(map[string]int)
-	m["a"] = 1
+	testToml := []byte(`
+		a = 1
+		b = 2
+		c = 3
+		`)
+	var result map[string]int
+	err := Unmarshal(testToml, &result)
+	if err != nil {
+		t.Errorf("Received unexpected error: %s", err)
+		return
+	}
 
-	err := Unmarshal(basicTestToml, m)
-	if err.Error() != "Only a pointer to struct can be unmarshaled from TOML" {
-		t.Fail()
+	expected := map[string]int{
+		"a": 1,
+		"b": 2,
+		"c": 3,
+	}
+
+	if !reflect.DeepEqual(result, expected) {
+		t.Errorf("Bad unmarshal: expected %v, got %v", expected, result)
+	}
+}
+
+func TestUnmarshalMapWithTypedKey(t *testing.T) {
+	testToml := []byte(`
+		a = 1
+		b = 2
+		c = 3
+		`)
+
+	type letter string
+	var result map[letter]int
+	err := Unmarshal(testToml, &result)
+	if err != nil {
+		t.Errorf("Received unexpected error: %s", err)
+		return
+	}
+
+	expected := map[letter]int{
+		"a": 1,
+		"b": 2,
+		"c": 3,
+	}
+
+	if !reflect.DeepEqual(result, expected) {
+		t.Errorf("Bad unmarshal: expected %v, got %v", expected, result)
+	}
+}
+
+func TestUnmarshalNonPointer(t *testing.T) {
+	a := 1
+	err := Unmarshal([]byte{}, a)
+	if err == nil {
+		t.Fatal("unmarshal should err when given a non pointer")
+	}
+}
+
+func TestUnmarshalInvalidPointerKind(t *testing.T) {
+	a := 1
+	err := Unmarshal([]byte{}, &a)
+	if err == nil {
+		t.Fatal("unmarshal should err when given an invalid pointer type")
 	}
 }
 
@@ -1357,6 +1413,49 @@ func TestUnmarshalDefaultFailureUnsupported(t *testing.T) {
 	}
 
 	err := Unmarshal([]byte(``), &doc)
+	if err == nil {
+		t.Fatal("should error")
+	}
+}
+
+func TestUnmarshalNestedAnonymousStructs(t *testing.T) {
+	type Nested struct {
+		Value string `toml:"nested_field"`
+	}
+	type Deep struct {
+		Nested
+	}
+	type Document struct {
+		Deep
+		Value string `toml:"own_field"`
+	}
+
+	var doc Document
+
+	err := Unmarshal([]byte(`nested_field = "nested value"`+"\n"+`own_field = "own value"`), &doc)
+	if err != nil {
+		t.Fatal("should not error")
+	}
+	if doc.Value != "own value" || doc.Nested.Value != "nested value" {
+		t.Fatal("unexpected values")
+	}
+}
+
+func TestUnmarshalNestedAnonymousStructs_Controversial(t *testing.T) {
+	type Nested struct {
+		Value string `toml:"nested"`
+	}
+	type Deep struct {
+		Nested
+	}
+	type Document struct {
+		Deep
+		Value string `toml:"own"`
+	}
+
+	var doc Document
+
+	err := Unmarshal([]byte(`nested = "nested value"`+"\n"+`own = "own value"`), &doc)
 	if err == nil {
 		t.Fatal("should error")
 	}

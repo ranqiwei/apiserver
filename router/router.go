@@ -4,6 +4,7 @@ import (
 	"apiserver/handler/sd"
 	"apiserver/handler/user"
 	"apiserver/router/middleware"
+	"github.com/gin-contrib/pprof"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )
@@ -11,6 +12,9 @@ import (
 /*路由加载的函数*/
 
 func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
+	//pprof router
+	pprof.Register(g)
+
 	g.Use(gin.Recovery())
 	g.Use(middleware.NoCache)
 	g.Use(middleware.Options)

@@ -26,3 +26,21 @@ import:
 - package: github.com/willf/pad
 - package: github.com/dgrijalva/jwt-go
   version: ~3.2.0
+- package: github.com/gin-contrib/pprof
+- package: github.com/swaggo/swag
+- package: github.com/ghodss/yaml
+- package: github.com/go-openapi/jsonreference
+- package: github.com/go-openapi/spec
+- package: github.com/pkg/errors
+- package: github.com/urfave/cli
+- package: github.com/go-openapi/swag
+- package: github.com/go-openapi/jsonpointer
+- package: github.com/PuerkitoBio/purell
+- package: golang.org/x/tools/go/loader
+- package: golang.org/x/net/idna
+- package: github.com/mailru/easyjson
+  subpackages:
+  - jwriter
+  - jlexer
+- package: github.com/PuerkitoBio/urlesc
+- package: github.com/swaggo/gin-swagger

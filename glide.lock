@@ -1,14 +1,22 @@
-hash: 851fcbd67011887453129a1ed08a25fa81923e174151ebf1047b2e92eaf47101
-updated: 2019-04-18T10:34:25.326871572+08:00
+hash: 7c59a5bc00bd65edd2e94d42ba08be444c2c917cc3d29facfada5267a5ba007d
+updated: 2019-06-18T16:45:43.682463002+08:00
 imports:
+- name: github.com/alecthomas/template
+  version: a0175ee3bccc567396460bf5acd36800cb10c49c
+  subpackages:
+  - parse
 - name: github.com/dgrijalva/jwt-go
   version: 06ea1031745cb8b3dab3f6a236daf2b0aa468b7e
 - name: github.com/fsnotify/fsnotify
   version: 1485a34d5d5723fea214f5710708e19a831720e4
+- name: github.com/ghodss/yaml
+  version: 25d852aebe32c875e9c044af3eef9c7dc6bc777f
+- name: github.com/gin-contrib/pprof
+  version: c61131ee7769c8d6bfb948eef80fbb3edf35dfb2
 - name: github.com/gin-contrib/sse
-  version: 5545eab6dad3bbbd6c5ae9186383c2a9d23c0dae
+  version: 54d8467d122d380a14768b6b4e5cd7ca4755938f
 - name: github.com/gin-gonic/gin
-  version: ffcbe77b1e6222b4e0e97eb1920adc1813fb2224
+  version: 75b9d2bed75a2d96198738ac3974211924dbde6c
   subpackages:
   - binding
   - internal/json
@@ -17,20 +25,28 @@ imports:
   version: 97b6244175ae18ea6eef668034fd6565847501c9
   subpackages:
   - oleutil
+- name: github.com/go-openapi/jsonpointer
+  version: a105a905c5e6ad147f08504784917f3e178e0ba5
+- name: github.com/go-openapi/jsonreference
+  version: 2903bfd4bfbaf188694f1edf731f2725a8fa344f
+- name: github.com/go-openapi/spec
+  version: bdfd7e07daecc404d77868a88b2364d0aed0ee5a
+- name: github.com/go-openapi/swag
+  version: 7e8dd5ceab83c86d17bc967d09e195414fe2b47e
 - name: github.com/go-playground/locales
-  version: f63010822830b6fe52288ee52d5a1151088ce039
+  version: 630ebbb602847eba93e75ae38bbc7bb7abcf1ff3
   subpackages:
   - currency
 - name: github.com/go-playground/universal-translator
   version: 71201497bace774495daed26a3874fd339e0b538
 - name: github.com/go-sql-driver/mysql
-  version: 578c4c8066964679ef44f45de2b6c7e811cc665e
+  version: 877a9775f06853f611fb2d4e817d92479242d1cd
 - name: github.com/golang/protobuf
-  version: e91709a02e0e8ff8b86b7aa913fdc9ae9498e825
+  version: b285ee9cfc6c881bb20c0d8dc73370ea9b9ec90f
   subpackages:
   - proto
 - name: github.com/hashicorp/hcl
-  version: 65a6292f0157eff210d03ed1bf6c59b190b8b906
+  version: cf7d376da96d9cecec7c7483cec2735efe54a410
   subpackages:
   - hcl/ast
   - hcl/parser
@@ -42,13 +58,13 @@ imports:
   - json/scanner
   - json/token
 - name: github.com/jinzhu/gorm
-  version: 7bc35615034c1d6994088c2cc925086fba6f565e
+  version: 01b66011427614f01e84a473b0303c917179f2a0
   subpackages:
   - dialects/mysql
 - name: github.com/jinzhu/inflection
-  version: 04140366298a54a039076d798123ffa108fff46c
+  version: f5c5f50e6090ae76a29240b61ae2a90dd810112e
 - name: github.com/json-iterator/go
-  version: 0ff49de124c6f76f8494e194af75bde0f1a49a29
+  version: 0039f4ac3d5680243e7d0650c581e7ec0885ef5a
 - name: github.com/leodido/go-urn
   version: a67a23e1c1af3c66528573bb86a87246477277c1
 - name: github.com/lexkong/log
@@ -57,9 +73,15 @@ imports:
   - lager
   - lager/color
 - name: github.com/magiconair/properties
-  version: 7757cc9fdb852f7579b24170bcacda2c7471bb6a
+  version: de8848e004dd33dc07a2947b3d76f618a7fc7ef1
+- name: github.com/mailru/easyjson
+  version: 94de47d64c6323a57053b3dd1c97f250cee92741
+  subpackages:
+  - buffer
+  - jlexer
+  - jwriter
 - name: github.com/mattn/go-isatty
-  version: c2a7a6ca930a4cd0bc33a3f298eb71960732a3a7
+  version: 1311e847b0cb909da63b5fecfb5370aa66236465
 - name: github.com/mitchellh/mapstructure
   version: 3536a929edddb9a5b34bd6861dc4a9647cb459fe
 - name: github.com/modern-go/concurrent
@@ -67,11 +89,17 @@ imports:
 - name: github.com/modern-go/reflect2
   version: 94122c33edd36123c84d5368cfb2b69df93a0ec8
 - name: github.com/pelletier/go-toml
-  version: 65b27e6823c427415d156c92d7034dd57a154cf8
+  version: dba45d427ff48cfb9bcf633db3a8e43b7364e261
+- name: github.com/pkg/errors
+  version: 27936f6d90f9c8e1145f11ed52ffffbfdb9e0af7
+- name: github.com/PuerkitoBio/purell
+  version: 44968752391892e1b0d0b821ee79e9a85fa13049
+- name: github.com/PuerkitoBio/urlesc
+  version: de5bf2ad457846296e2031421a34e2568e304e35
 - name: github.com/satori/go.uuid
   version: b2ce2384e17bbe0c6d34077efa39dbab3e09123b
 - name: github.com/shirou/gopsutil
-  version: 2cbc9195c892b304060269ef280375236d2fcac9
+  version: 13375e2f9c9b4f2cfca1f851acde9a674b27fce8
   subpackages:
   - cpu
   - disk
@@ -79,13 +107,13 @@ imports:
   - load
   - mem
 - name: github.com/sirupsen/logrus
-  version: 8bdbc7bcc01dcbb8ec23dc8a28e332258d25251f
+  version: 839c75faf7f98a33d445d181f3018b5c3409a45e
 - name: github.com/spf13/afero
   version: 588a75ec4f32903aa5e39a2619ba6a4631e28424
   subpackages:
   - mem
 - name: github.com/spf13/cast
-  version: 8c9545af88b134710ab1cd196795e7f2388358d7
+  version: c01685bb8421cecb276fa517e91f757215f980b3
 - name: github.com/spf13/jwalterweatherman
   version: 94f6ae3ed3bceceafa716478c5fbf8d29ca601a1
 - name: github.com/spf13/pflag
@@ -93,27 +121,39 @@ imports:
 - name: github.com/spf13/viper
   version: b5e8006cbee93ec955a89ab31e0e3ce3204f3736
 - name: github.com/StackExchange/wmi
-  version: e0a55b97c70558c92ce14085e41b35a894e93d3d
+  version: cbe66965904dbe8a6cd589e2298e5d8b986bd7dd
+- name: github.com/swaggo/gin-swagger
+  version: ddb15761267c07109d8249ad8230df5ecf94c1c7
+- name: github.com/swaggo/swag
+  version: 6170d1bca704dd9286b20d4524446123b2bc43a4
 - name: github.com/teris-io/shortid
   version: 771a37caa5cf0c81f585d7b6df4dfc77e0615b5c
 - name: github.com/ugorji/go
-  version: d09a80c1e0c3162e022a114ab0f037e2596969e6
+  version: 7865e43e776b01f708871ba4d37a9ed1d3353bfd
   subpackages:
   - codec
+- name: github.com/urfave/cli
+  version: 693af58b4d51b8fcc7f9d89576da170765980581
 - name: github.com/willf/pad
   version: eccfe5d84172e4f9dfd83fac9ed3a5f0eafbc2b4
 - name: golang.org/x/crypto/bcrypt
-  version: f416ebab96af27ca70b6e5c23d6a0747530da626
+  version: 57b3e21c3d5606066a87e63cfe07ec6b9f0db000
+- name: golang.org/x/net/idna
+  version: d28f0bde5980168871434b95cfc858db9f2a7a99
 - name: golang.org/x/sys/unix
-  version: 12500544f89f9420afe9529ba8940bf72d294972
+  version: 15dcb6c0061f497a3f66e3ea034b629c6dd4d99e
 - name: golang.org/x/sys/windows
-  version: 12500544f89f9420afe9529ba8940bf72d294972
+  version: 15dcb6c0061f497a3f66e3ea034b629c6dd4d99e
 - name: golang.org/x/text/transform
-  version: f4905fbd45b6790792202848439271c74074bbfd
+  version: 342b2e1fbaa52c93f31447ad2c6abc048c63e475
 - name: golang.org/x/text/unicode/norm
-  version: f4905fbd45b6790792202848439271c74074bbfd
+  version: 342b2e1fbaa52c93f31447ad2c6abc048c63e475
+- name: golang.org/x/text/width
+  version: 342b2e1fbaa52c93f31447ad2c6abc048c63e475
+- name: golang.org/x/tools/go/loader
+  version: da514acc4774e511ba0c2955844e655a5b20938c
 - name: google.golang.org/appengine
-  version: 54a98f90d1c46b7731eb8fb305d2a321c30ef610
+  version: b2f4a3cf3c67576a2ee09e1fe62656a5086ce880
   repo: https://github.com/golang/appengine
   subpackages:
   - app_identity
@@ -122,7 +162,7 @@ imports:
 - name: gopkg.in/go-playground/validator.v8
   version: 5f1438d3fca68893a817e4a66806cea46a9e4ebf
 - name: gopkg.in/go-playground/validator.v9
-  version: 46b4b1e301c24cac870ffcb4ba5c8a703d1ef475
+  version: 884d31b8cad6a1ec877f2400d555924cea03bbea
 - name: gopkg.in/yaml.v2
   version: 51d6538a90f86fe93ac480b35f37b2be17fef232
 testImports: []

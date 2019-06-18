@@ -7855,6 +7855,7 @@ func TestHostnameRFC952Validation(t *testing.T) {
 		{"test.example24.com", true},
 		{"test24.example24.com", true},
 		{"example", true},
+		{"EXAMPLE", true},
 		{"1.foo.com", false},
 		{"test.example.com.", false},
 		{"example.com.", false},
@@ -8616,5 +8617,149 @@ func TestEndsWithValidation(t *testing.T) {
 		if (s.ExpectedNil && errs != nil) || (!s.ExpectedNil && errs == nil) {
 			t.Fatalf("Index: %d failed Error: %s", i, errs)
 		}
+	}
+}
+
+func TestRequiredWith(t *testing.T) {
+	fieldVal := "test"
+	test := struct {
+		FieldE  string            `validate:"omitempty" json:"field_e"`
+		FieldER string            `validate:"required_with=FieldE" json:"field_er"`
+		Field1  string            `validate:"omitempty" json:"field_1"`
+		Field2  *string           `validate:"required_with=Field1" json:"field_2"`
+		Field3  map[string]string `validate:"required_with=Field2" json:"field_3"`
+		Field4  interface{}       `validate:"required_with=Field3" json:"field_4"`
+		Field5  string            `validate:"required_with=Field3" json:"field_5"`
+	}{
+		Field1: "test_field1",
+		Field2: &fieldVal,
+		Field3: map[string]string{"key": "val"},
+		Field4: "test",
+		Field5: "test",
+	}
+
+	validate := New()
+
+	errs := validate.Struct(test)
+
+	if errs != nil {
+		t.Fatalf("failed Error: %s", errs)
+	}
+}
+
+func TestRequiredWithAll(t *testing.T) {
+
+	fieldVal := "test"
+	test := struct {
+		FieldE  string            `validate:"omitempty" json:"field_e"`
+		FieldER string            `validate:"required_with_all=FieldE" json:"field_er"`
+		Field1  string            `validate:"omitempty" json:"field_1"`
+		Field2  *string           `validate:"required_with_all=Field1" json:"field_2"`
+		Field3  map[string]string `validate:"required_with_all=Field2" json:"field_3"`
+		Field4  interface{}       `validate:"required_with_all=Field3" json:"field_4"`
+		Field5  string            `validate:"required_with_all=Field3" json:"field_5"`
+	}{
+		Field1: "test_field1",
+		Field2: &fieldVal,
+		Field3: map[string]string{"key": "val"},
+		Field4: "test",
+		Field5: "test",
+	}
+
+	validate := New()
+
+	errs := validate.Struct(test)
+
+	if errs != nil {
+		t.Fatalf("failed Error: %s", errs)
+	}
+}
+
+func TestRequiredWithout(t *testing.T) {
+
+	fieldVal := "test"
+	test := struct {
+		Field1 string            `validate:"omitempty" json:"field_1"`
+		Field2 *string           `validate:"required_without=Field1" json:"field_2"`
+		Field3 map[string]string `validate:"required_without=Field2" json:"field_3"`
+		Field4 interface{}       `validate:"required_without=Field3" json:"field_4"`
+		Field5 string            `validate:"required_without=Field3" json:"field_5"`
+	}{
+		Field2: &fieldVal,
+		Field3: map[string]string{"key": "val"},
+		Field4: "test",
+		Field5: "test",
+	}
+
+	validate := New()
+
+	errs := validate.Struct(test)
+
+	if errs != nil {
+		t.Fatalf("failed Error: %s", errs)
+	}
+
+	test2 := struct {
+		Field1 string            `validate:"omitempty" json:"field_1"`
+		Field2 *string           `validate:"required_without=Field1" json:"field_2"`
+		Field3 map[string]string `validate:"required_without=Field2" json:"field_3"`
+		Field4 interface{}       `validate:"required_without=Field3" json:"field_4"`
+		Field5 string            `validate:"required_without=Field3" json:"field_5"`
+		Field6 string            `validate:"required_without=Field1" json:"field_6"`
+	}{
+		Field3: map[string]string{"key": "val"},
+		Field4: "test",
+		Field5: "test",
+	}
+
+	errs = validate.Struct(test2)
+
+	if errs == nil {
+		t.Fatalf("failed Error: %s", errs)
+	}
+}
+
+func TestRequiredWithoutAll(t *testing.T) {
+
+	fieldVal := "test"
+	test := struct {
+		Field1 string            `validate:"omitempty" json:"field_1"`
+		Field2 *string           `validate:"required_without_all=Field1" json:"field_2"`
+		Field3 map[string]string `validate:"required_without_all=Field2" json:"field_3"`
+		Field4 interface{}       `validate:"required_without_all=Field3" json:"field_4"`
+		Field5 string            `validate:"required_without_all=Field3" json:"field_5"`
+	}{
+		Field1: "",
+		Field2: &fieldVal,
+		Field3: map[string]string{"key": "val"},
+		Field4: "test",
+		Field5: "test",
+	}
+
+	validate := New()
+
+	errs := validate.Struct(test)
+
+	if errs != nil {
+		t.Fatalf("failed Error: %s", errs)
+	}
+
+	test2 := struct {
+		Field1 string            `validate:"omitempty" json:"field_1"`
+		Field2 *string           `validate:"required_without_all=Field1" json:"field_2"`
+		Field3 map[string]string `validate:"required_without_all=Field2" json:"field_3"`
+		Field4 interface{}       `validate:"required_without_all=Field3" json:"field_4"`
+		Field5 string            `validate:"required_without_all=Field3" json:"field_5"`
+		Field6 string            `validate:"required_without_all=Field1" json:"field_6"`
+	}{
+		Field3: map[string]string{"key": "val"},
+		Field4: "test",
+		Field5: "test",
+	}
+
+	errs = validate.Struct(test2)
+
+	if errs == nil {
+		t.Fatalf("failed Error: %s", errs)
 	}
 }

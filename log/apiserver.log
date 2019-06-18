@@ -211,3 +211,7 @@ created by main.main
 2019-06-14 15:04:17.525 INFO apiserver/main.go:81 Start to listening the incoming requests on http address: :8080
 2019-06-14 15:04:17.525 INFO apiserver/main.go:76 Start to listening the incoming requests on https address: :8081
 2019-06-14 15:04:17.526 INFO apiserver/main.go:68 The router has been deployed successfully.
+2019-06-17 16:14:34.992 INFO apiserver/main.go:81 Start to listening the incoming requests on http address: :8080
+2019-06-17 16:14:34.992 INFO apiserver/main.go:76 Start to listening the incoming requests on https address: :8081
+2019-06-17 16:14:34.993 INFO apiserver/main.go:95 waiting for the router, retry in 1 second.
+2019-06-17 16:14:40.019 INFO apiserver/main.go:68 The router has been deployed successfully.

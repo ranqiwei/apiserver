@@ -1,11 +1,14 @@
 package router
 
 import (
+	_ "apiserver/docs"
 	"apiserver/handler/sd"
 	"apiserver/handler/user"
 	"apiserver/router/middleware"
 	"github.com/gin-contrib/pprof"
 	"github.com/gin-gonic/gin"
+	ginSwagger "github.com/swaggo/gin-swagger"
+	"github.com/swaggo/gin-swagger/swaggerFiles"
 	"net/http"
 )
 
@@ -24,6 +27,9 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	g.NoRoute(func(c *gin.Context) {
 		c.String(http.StatusNotFound, "The incorrect api route")
 	})
+
+	//swagger api docs
+	g.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
 	//login router
 	g.POST("/login", user.Login)
